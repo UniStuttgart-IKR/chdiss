@@ -1,0 +1,338 @@
+(?<![@#])\bAI\b
+(?<![@#])\bASE\b
+(?<![@#])\bAS\b
+(?<![@#])\bASs\b
+(?<![@#])\bBGP\b
+(?<![@#])\bBVT\b
+(?<![@#])\bBVTs\b
+(?<![@#])\bCDF\b
+(?<![@#])\bDAG\b
+(?<![@#])\bDAGs\b
+(?<![@#])\bDSP\b
+(?<![@#])\bDWDM\b
+(?<![@#])\bE2E\b
+(?<![@#])\bECA\b
+(?<![@#])\bEGP\b
+(?<![@#])\bEGPs\b
+(?<![@#])\bEON\b
+(?<![@#])\bEONs\b
+(?<![@#])\bESS\b
+(?<![@#])\bEWBI\b
+(?<![@#])\bFDM\b
+(?<![@#])\bFEC\b
+(?<![@#])\bFF\b
+(?<![@#])\bFIT\b
+(?<![@#])\bFTTH\b
+(?<![@#])\bFTTx\b
+(?<![@#])\bFWM\b
+(?<![@#])\bGEV\b
+(?<![@#])\bGMPLS\b
+(?<![@#])\bGNN\b
+(?<![@#])\bGRMBSCA\b
+(?<![@#])\bHDI\b
+(?<![@#])\bHMC\b
+(?<![@#])\bHTTP\b
+(?<![@#])\bHVI\b
+(?<![@#])\bH\-PCE\b
+(?<![@#])\bIBN\b
+(?<![@#])\bICN\b
+(?<![@#])\bIGP\b
+(?<![@#])\bIKR\b
+(?<![@#])\bILP\b
+(?<![@#])\bIP\b
+(?<![@#])\bIPoDWDM\b
+(?<![@#])\bISO\b
+(?<![@#])\bISP\b
+(?<![@#])\bISPs\b
+(?<![@#])\bIS\-IS\b
+(?<![@#])\bIXP\b
+(?<![@#])\bIXPs\b
+(?<![@#])\bIoT\b
+(?<![@#])\bKPI\b
+(?<![@#])\bKSP\b
+(?<![@#])\bLHS\b
+(?<![@#])\bLSP\b
+(?<![@#])\bLSPs\b
+(?<![@#])\bLSTM\b
+(?<![@#])\bMCF\b
+(?<![@#])\bMCMC\b
+(?<![@#])\bMILP\b
+(?<![@#])\bMILS\b
+(?<![@#])\bML\b
+(?<![@#])\bMPLS\b
+(?<![@#])\bMTBF\b
+(?<![@#])\bMTBR\b
+(?<![@#])\bMTTF\b
+(?<![@#])\bMTTR\b
+(?<![@#])\bNBI\b
+(?<![@#])\bNBIs\b
+(?<![@#])\bNED\b
+(?<![@#])\bNLRI\b
+(?<![@#])\bNN\b
+(?<![@#])\bNOS\b
+(?<![@#])\bNUTS\b
+(?<![@#])\bOAM\b
+(?<![@#])\bOBGP\b
+(?<![@#])\bODTN\b
+(?<![@#])\bODU\b
+(?<![@#])\bONAP\b
+(?<![@#])\bOPU\b
+(?<![@#])\bOSI\b
+(?<![@#])\bOSNR\b
+(?<![@#])\bOSPF\b
+(?<![@#])\bOTN\b
+(?<![@#])\bOTU\b
+(?<![@#])\bOXC\b
+(?<![@#])\bO\-E\-O\b
+(?<![@#])\bPBNM\b
+(?<![@#])\bPCE\b
+(?<![@#])\bPDF\b
+(?<![@#])\bPDH\b
+(?<![@#])\bPIT\b
+(?<![@#])\bPMD\b
+(?<![@#])\bPMF\b
+(?<![@#])\bPON\b
+(?<![@#])\bPONs\b
+(?<![@#])\bPPL\b
+(?<![@#])\bPRIAM\b
+(?<![@#])\bQoS\b
+(?<![@#])\bRHS\b
+(?<![@#])\bRL\b
+(?<![@#])\bRMSA\b
+(?<![@#])\bRMSE\b
+(?<![@#])\bROADM\b
+(?<![@#])\bRSA\b
+(?<![@#])\bRSVP\-TE\b
+(?<![@#])\bRV\b
+(?<![@#])\bSBI\b
+(?<![@#])\bSDH\b
+(?<![@#])\bSDM\b
+(?<![@#])\bSDN\b
+(?<![@#])\bSLA\b
+(?<![@#])\bSLAs\b
+(?<![@#])\bSMTP\b
+(?<![@#])\bSONET\b
+(?<![@#])\bSPM\b
+(?<![@#])\bSRG\b
+(?<![@#])\bSRGs\b
+(?<![@#])\bSRLG\b
+(?<![@#])\bSRLGs\b
+(?<![@#])\bTCO\b
+(?<![@#])\bTCP\b
+(?<![@#])\bTDM\b
+(?<![@#])\bTE\b
+(?<![@#])\bTTF\b
+(?<![@#])\bTTL\b
+(?<![@#])\bTTR\b
+(?<![@#])\bT\-API\b
+(?<![@#])\bUDP\b
+(?<![@#])\bVIM\b
+(?<![@#])\bVNF\b
+(?<![@#])\bWDM\b
+(?<![@#])\bXPM\b
+(?<![@#])\beBGP\b
+(?<![@#])\bgNMI\b
+(?<![@#])\bgRPC\b
+(?<![@#])\biBGP\b
+(?i)(?<![@#])\bHamiltonian\ Monte\ Carlo\b
+(?i)(?<![@#])\bIBN\-into\-SDN\b
+(?i)(?<![@#])\bIBN\-over\-SDN\b
+(?i)(?<![@#])\bIP\ router\b
+(?i)(?<![@#])\bIP\-optical\b
+(?i)(?<![@#])\bIP\-over\-DWDM\b
+(?i)(?<![@#])\bKSPFF\b
+(?i)(?<![@#])\bMINDFul\.jl\b
+(?i)(?<![@#])\bMarkov\ chain\ Monte\ Carlo\b
+(?i)(?<![@#])\bNETCONF\b
+(?i)(?<![@#])\bONOS\b
+(?i)(?<![@#])\bOpenConfig\b
+(?i)(?<![@#])\bOpenDaylight\b
+(?i)(?<![@#])\bOpenFlow\b
+(?i)(?<![@#])\bProvisioning\ Risk\-aware\ Intents\ Across\ Multi\-domains\b
+(?i)(?<![@#])\bSLA\ decomposition\b
+(?i)(?<![@#])\bTeraFlowSDN\b
+(?i)(?<![@#])\bYANG\b
+(?i)(?<![@#])\baccess\ network\b
+(?i)(?<![@#])\bamplified\ spontaneous\ emissions\b
+(?i)(?<![@#])\bartificial\ intelligence\b
+(?i)(?<![@#])\bautonomous\ system\b
+(?i)(?<![@#])\bautonomous\ systems\b
+(?i)(?<![@#])\bavailability\ metric\b
+(?i)(?<![@#])\bavailability\ specification\b
+(?i)(?<![@#])\bbackbone\ network\b
+(?i)(?<![@#])\bbandwidth\-variable\ transponder\b
+(?i)(?<![@#])\bbandwidth\-variable\ transponders\b
+(?i)(?<![@#])\bbest\-effort\b
+(?i)(?<![@#])\bborder\ gateway\ protocol\b
+(?i)(?<![@#])\bcompliance\ target\b
+(?i)(?<![@#])\bconjugate\ prior\b
+(?i)(?<![@#])\bcore\ network\b
+(?i)(?<![@#])\bcross\-domain\b
+(?i)(?<![@#])\bcross\-phase\ modulation\b
+(?i)(?<![@#])\bcumulative\ distribution\ function\b
+(?i)(?<![@#])\bdedicated\ protection\b
+(?i)(?<![@#])\bdense\ WDM\b
+(?i)(?<![@#])\bdigital\ signal\ processing\b
+(?i)(?<![@#])\bdirected\ acyclic\ graph\b
+(?i)(?<![@#])\bdirected\ acyclic\ graphs\b
+(?i)(?<![@#])\bdisaggregation\b
+(?i)(?<![@#])\bdowntime\b
+(?i)(?<![@#])\beast/westbound\ interface\b
+(?i)(?<![@#])\beffective\ sample\ size\b
+(?i)(?<![@#])\belastic\ optical\ networks\b
+(?i)(?<![@#])\bend\-to\-end\b
+(?i)(?<![@#])\bevent\-condition\-action\b
+(?i)(?<![@#])\bexperienced\ availability\b
+(?i)(?<![@#])\bexterior\ gateway\ protocol\b
+(?i)(?<![@#])\bexterior\ gateway\ protocols\b
+(?i)(?<![@#])\bexternal\ BGP\b
+(?i)(?<![@#])\bfailure\ in\ time\b
+(?i)(?<![@#])\bfiber\-to\-the\-home\b
+(?i)(?<![@#])\bfiber\-to\-the\-x\b
+(?i)(?<![@#])\bfirst\-fit\b
+(?i)(?<![@#])\bfirst\-order\ metric\b
+(?i)(?<![@#])\bfixed\-grid\b
+(?i)(?<![@#])\bflex\-grid\b
+(?i)(?<![@#])\bforward\ error\ correction\b
+(?i)(?<![@#])\bfour\-wave\ mixing\b
+(?i)(?<![@#])\bfrequency\ division\ multiplexing\b
+(?i)(?<![@#])\bgRPC\ network\ management\ interface\b
+(?i)(?<![@#])\bgeneralized\ MPLS\b
+(?i)(?<![@#])\bgeneralized\ extreme\ value\b
+(?i)(?<![@#])\bgraph\ neural\ network\b
+(?i)(?<![@#])\bgrooming,\ routing,\ modulation,\ band,\ spectrum,\ and\ core\ assignment\b
+(?i)(?<![@#])\bgrooming\b
+(?i)(?<![@#])\bhierarchical\ PCE\b
+(?i)(?<![@#])\bhigher\-order\ metric\b
+(?i)(?<![@#])\bhighest\ density\ interval\b
+(?i)(?<![@#])\bhighest\ value\ interval\b
+(?i)(?<![@#])\bhot\-potato\b
+(?i)(?<![@#])\bhyperlink\b
+(?i)(?<![@#])\bhypertext\ transfer\ protocol\b
+(?i)(?<![@#])\binformation\-centric\ networking\b
+(?i)(?<![@#])\binstitute\ für\ kommunikationnetze\ und\ rechnersysteme\b
+(?i)(?<![@#])\binteger\ linear\ programming\b
+(?i)(?<![@#])\bintent\ delegation\b
+(?i)(?<![@#])\bintent\ metric\b
+(?i)(?<![@#])\bintent\ splitting\b
+(?i)(?<![@#])\bintent\ washing\b
+(?i)(?<![@#])\bintent\-based\ networking\b
+(?i)(?<![@#])\binter\-domain\b
+(?i)(?<![@#])\binterior\ gateway\ protocol\b
+(?i)(?<![@#])\bintermediate\ system\-to\-intermediate\ system\b
+(?i)(?<![@#])\binternal\ BGP\b
+(?i)(?<![@#])\binternational\ organization\ for\ standardization\b
+(?i)(?<![@#])\binternet\ exchange\ point\b
+(?i)(?<![@#])\binternet\ of\ things\b
+(?i)(?<![@#])\binternet\ protocol\b
+(?i)(?<![@#])\binternet\ service\ provider\b
+(?i)(?<![@#])\binternet\ service\ providers\b
+(?i)(?<![@#])\binterval\ availability\b
+(?i)(?<![@#])\bintra\-domain\b
+(?i)(?<![@#])\bjust\-above\-threshold\b
+(?i)(?<![@#])\bk\-shortest\ paths\ first\-fit\b
+(?i)(?<![@#])\bk\-shortest\ paths\b
+(?i)(?<![@#])\bkey\ performance\ indicator\b
+(?i)(?<![@#])\blabel\-switched\ path\b
+(?i)(?<![@#])\bleft\-hand\ side\b
+(?i)(?<![@#])\blightpath\b
+(?i)(?<![@#])\blong\ short\-term\ memory\b
+(?i)(?<![@#])\blong\-tail\ effect\b
+(?i)(?<![@#])\blow\-level\ intent\b
+(?i)(?<![@#])\bmachine\ learning\b
+(?i)(?<![@#])\bmean\ time\ to\ failure\b
+(?i)(?<![@#])\bmean\ time\ to\ repair\b
+(?i)(?<![@#])\bmetro\ network\b
+(?i)(?<![@#])\bminimal\ identifiable\ link\ sequence\b
+(?i)(?<![@#])\bmixed\ integer\ linear\ programming\b
+(?i)(?<![@#])\bmulti\-core\ fiber\b
+(?i)(?<![@#])\bmulti\-domain\b
+(?i)(?<![@#])\bmultiprotocol\ label\ switching\b
+(?i)(?<![@#])\bnetwork\ operating\ system\b
+(?i)(?<![@#])\bnetwork\ tomography\b
+(?i)(?<![@#])\bnetwork\-layer\ reachability\ information\b
+(?i)(?<![@#])\bneural\ network\b
+(?i)(?<![@#])\bno\-U\-turn\ sampler\b
+(?i)(?<![@#])\bnormalized\ edge\ density\b
+(?i)(?<![@#])\bnorthbound\ interface\b
+(?i)(?<![@#])\bopen\ disaggregated\ transport\ network\b
+(?i)(?<![@#])\bopen\ network\ automation\ platform\b
+(?i)(?<![@#])\bopen\ shortest\ path\ first\b
+(?i)(?<![@#])\bopen\ systems\ interconnection\b
+(?i)(?<![@#])\boperations,\ administration,\ and\ maintenance\b
+(?i)(?<![@#])\boptical\ BGP\b
+(?i)(?<![@#])\boptical\ cross\-connect\b
+(?i)(?<![@#])\boptical\ data\ unit\b
+(?i)(?<![@#])\boptical\ payload\ unit\b
+(?i)(?<![@#])\boptical\ reach\b
+(?i)(?<![@#])\boptical\ signal\-to\-noise\ ratio\b
+(?i)(?<![@#])\boptical\ transport\ network\b
+(?i)(?<![@#])\boptical\ transport\ unit\b
+(?i)(?<![@#])\boptical\-electrical\-optical\b
+(?i)(?<![@#])\bpassive\ optical\ network\b
+(?i)(?<![@#])\bpassive\ optical\ networks\b
+(?i)(?<![@#])\bpath\ computation\ element\b
+(?i)(?<![@#])\bpending\ interest\ table\b
+(?i)(?<![@#])\bplesiochronous\ digital\ hierarchy\b
+(?i)(?<![@#])\bpoint\ availability\b
+(?i)(?<![@#])\bpolarization\-mode\ dispersion\b
+(?i)(?<![@#])\bpolicy\-based\ network\ management\b
+(?i)(?<![@#])\bprior\ analysis\b
+(?i)(?<![@#])\bprivate\ peering\b
+(?i)(?<![@#])\bprobabilistic\ programming\ language\b
+(?i)(?<![@#])\bprobability\ density\ function\b
+(?i)(?<![@#])\bprobability\ mass\ function\b
+(?i)(?<![@#])\bprotection\b
+(?i)(?<![@#])\bpublic\ peering\b
+(?i)(?<![@#])\bquality\ of\ service\b
+(?i)(?<![@#])\brandom\ variable\b
+(?i)(?<![@#])\breconfigurable\ optical\ add\-drop\ multiplexer\b
+(?i)(?<![@#])\breinforcement\ learning\b
+(?i)(?<![@#])\breliability\b
+(?i)(?<![@#])\bremote\ procedure\ calls\b
+(?i)(?<![@#])\bresource\ metric\b
+(?i)(?<![@#])\bresource\ reservation\ protocol\ \-\ traffic\ engineering\b
+(?i)(?<![@#])\brestoration\b
+(?i)(?<![@#])\bright\-hand\ side\b
+(?i)(?<![@#])\broot\ mean\ square\ error\b
+(?i)(?<![@#])\brouting,\ modulation,\ and\ spectrum\ assignment\b
+(?i)(?<![@#])\brouting\ and\ spectrum\ assignment\b
+(?i)(?<![@#])\bsecond\-order\ metric\b
+(?i)(?<![@#])\bself\-phase\ modulation\b
+(?i)(?<![@#])\bservice\-level\ agreement\b
+(?i)(?<![@#])\bservice\-level\ agreements\b
+(?i)(?<![@#])\bshared\ link\ group\b
+(?i)(?<![@#])\bshared\ link\ groups\b
+(?i)(?<![@#])\bshared\ protection\b
+(?i)(?<![@#])\bshared\ risk\ link\ group\b
+(?i)(?<![@#])\bshared\ risk\ link\ groups\b
+(?i)(?<![@#])\bsimple\ mail\ transfer\ protocol\b
+(?i)(?<![@#])\bsingle\-domain\b
+(?i)(?<![@#])\bsoftware\-defined\ networking\b
+(?i)(?<![@#])\bsouthbound\ interface\b
+(?i)(?<![@#])\bspace\ division\ multiplexing\b
+(?i)(?<![@#])\bspectrum\ contiguity\b
+(?i)(?<![@#])\bspectrum\ continuity\b
+(?i)(?<![@#])\bsteady\-state\ availability\b
+(?i)(?<![@#])\bsurvivability\b
+(?i)(?<![@#])\bsynchronous\ digital\ hierarchy\b
+(?i)(?<![@#])\bsynchronous\ optical\ network\b
+(?i)(?<![@#])\bthird\-order\ metric\b
+(?i)(?<![@#])\btime\ division\ multiplexing\b
+(?i)(?<![@#])\btime\ to\ failure\b
+(?i)(?<![@#])\btime\ to\ live\b
+(?i)(?<![@#])\btime\ to\ repair\b
+(?i)(?<![@#])\btopology\ inference\b
+(?i)(?<![@#])\btopology\ variability\b
+(?i)(?<![@#])\btotal\ cost\ of\ ownership\b
+(?i)(?<![@#])\btraffic\ engineering\b
+(?i)(?<![@#])\btransmission\ control\ protocol\b
+(?i)(?<![@#])\btransport\ API\b
+(?i)(?<![@#])\btrue\ availability\b
+(?i)(?<![@#])\buptime\b
+(?i)(?<![@#])\buser\ datagram\ protocol\b
+(?i)(?<![@#])\bvirtual\ infrastructure\ manager\b
+(?i)(?<![@#])\bvirtual\ network\ function\b
+(?i)(?<![@#])\bwavelength\ division\ multiplexing\b
+(?i)(?<![@#])\bweakly\ informative\ prior\b
+(?i)(?<![@#])\bzero\-disclosure\b

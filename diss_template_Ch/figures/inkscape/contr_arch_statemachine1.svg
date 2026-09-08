@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="83.849998mm"
+   height="53.849998mm"
+   viewBox="0 0 83.849998 53.849998"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.2 (1:1.4.2+202505120737+ebf0e940d0)"
+   sodipodi:docname="contr_arch_statemachine1.svg"
+   inkscape:export-filename="contr_arch_statemachine1.pdf"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     inkscape:zoom="3.3596116"
+     inkscape:cx="149.42203"
+     inkscape:cy="113.10831"
+     inkscape:window-width="2259"
+     inkscape:window-height="1242"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g1" />
+  <defs
+     id="defs1">
+    <marker
+       style="overflow:visible"
+       id="marker19"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="0.80000001"
+       markerHeight="0.80000001"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path19" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="marker22"
+       refX="0"
+       refY="0"
+       orient="auto-start-reverse"
+       inkscape:stockid="Triangle arrow"
+       markerWidth="0.80000001"
+       markerHeight="0.80000001"
+       viewBox="0 0 1 1"
+       inkscape:isstock="true"
+       inkscape:collect="always"
+       preserveAspectRatio="xMidYMid">
+      <path
+         transform="scale(0.5)"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:1pt"
+         d="M 5.77,0 -2.88,5 V -5 Z"
+         id="path22" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g3"
+       transform="translate(0.62613531,-12.775625)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect3"
+         width="26.038223"
+         height="6.8785648"
+         x="-0.14337994"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="1.7734617"
+         y="32.764114"
+         id="text3"><tspan
+           sodipodi:role="line"
+           id="tspan3"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="1.7734617"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+    <g
+       id="g4"
+       transform="translate(43.457894,-12.775625)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect4"
+         width="26.038223"
+         height="6.8785648"
+         x="-0.14337994"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="1.7734617"
+         y="32.764114"
+         id="text4"><tspan
+           sodipodi:role="line"
+           id="tspan4"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="1.7734617"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+    <g
+       id="g5"
+       transform="translate(0.62362858,1.8077085)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect5"
+         width="26.038223"
+         height="6.8785648"
+         x="-0.14087321"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="1.7759684"
+         y="32.764114"
+         id="text5"><tspan
+           sodipodi:role="line"
+           id="tspan5"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="1.7759684"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+    <g
+       id="g6"
+       transform="translate(29.523259,1.8077085)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect6"
+         width="26.038223"
+         height="6.8785648"
+         x="-0.14337994"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="1.7734617"
+         y="32.764114"
+         id="text6"><tspan
+           sodipodi:role="line"
+           id="tspan6"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="1.7734617"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+    <g
+       id="g7"
+       transform="translate(58.663977,1.8077085)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect7"
+         width="26.038223"
+         height="6.8785648"
+         x="-1.4148288"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="0.50201285"
+         y="32.764114"
+         id="text7"><tspan
+           sodipodi:role="line"
+           id="tspan7"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="0.50201285"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+    <g
+       id="g8"
+       transform="translate(58.593738,16.391042)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect8"
+         width="26.038223"
+         height="6.8785648"
+         x="-1.3445896"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="0.57225204"
+         y="32.764114"
+         id="text8"><tspan
+           sodipodi:role="line"
+           id="tspan8"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="0.57225204"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+    <g
+       id="g9"
+       transform="translate(30.722783,16.391042)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect9"
+         width="26.038223"
+         height="6.8785648"
+         x="-1.3445896"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="0.57225204"
+         y="32.764114"
+         id="text9"><tspan
+           sodipodi:role="line"
+           id="tspan9"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="0.57225204"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1;marker-end:url(#marker19)"
+       d="m 35.098309,7.497884 v 3.852384 H 13.501867 v 1.789175"
+       id="path17"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1;marker-end:url(#marker19)"
+       d="m 33.464581,11.350268 h 22.869045 v 1.789175"
+       id="path20"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.600001;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1;marker-end:url(#marker22)"
+       d="m 13.501867,22.397607 v 5.454884"
+       id="path21"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1;marker-end:url(#marker19)"
+       d="m 56.333626,22.081217 v 3.893305 H 42.397305 v 1.877969"
+       id="path24"
+       sodipodi:nodetypes="cccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.6;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1;marker-end:url(#marker19)"
+       d="M 56.333626,25.974522 H 70.26826 v 1.877969"
+       id="path25"
+       sodipodi:nodetypes="ccc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.600001;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1;marker-end:url(#marker22)"
+       d="m 42.397305,36.980941 0.002,5.411073"
+       id="path27"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.600001;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1;marker-end:url(#marker22)"
+       d="m 70.26826,36.980941 0.002,5.411073"
+       id="path28"
+       sodipodi:nodetypes="cc" />
+    <g
+       id="g1"
+       transform="translate(21.950152,-27.358958)">
+      <rect
+         style="fill:#dedede;fill-opacity:1;stroke:#000000;stroke-width:0.3;stroke-dasharray:none;stroke-dashoffset:10.436;stroke-opacity:1"
+         id="rect1"
+         width="26.038223"
+         height="6.8785648"
+         x="-0.14337994"
+         y="27.978277" />
+      <text
+         xml:space="preserve"
+         style="font-size:3.88056px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324001;stroke-dashoffset:10.436;stroke-opacity:1"
+         x="1.7734497"
+         y="32.764114"
+         id="text1"><tspan
+           sodipodi:role="line"
+           id="tspan1"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.88056px;font-family:NewComputerModern10;-inkscape-font-specification:NewComputerModern10;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.324"
+           x="1.7734497"
+           y="32.764114">INSTALLED</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,16 @@
+# Compiled Typst output
+diss_template_Ch/main.pdf
+diss_template_Ch/main.html
+diss_template_Ch/mainbw.pdf
+report-releases/*.pdf
+!report-releases/.gitkeep
+
+# Python cache & logs
+__pycache__/
+*.py[cod]
+scripts/*report.txt
+
+# OS & Editor
+.DS_Store
+*.swp
+*.swo

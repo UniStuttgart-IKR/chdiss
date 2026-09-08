@@ -1,0 +1,161 @@
+'cite-2022Christou':
+  type: article
+  title: Decentralized Intent-driven Coordination of Multi-Domain IP-Optical Networks
+  author: Christou, Filippos
+  date: 2022
+  page-range: 359–363
+  serial-number:
+    doi: 10.23919/CNSM55787.2022.9964606
+  parent:
+    type: proceedings
+    title: 2022 18th International Conference on Network and Service Management (CNSM)
+    issue: ''
+    volume: 0
+
+
+'cite-enderle-2020':
+  type: article
+  title: "Delay-Differentiated Routing in Meshed Backbone Networks"
+  author:
+    - Enderle, Tobias
+    - Witt, Arthur
+    - Christou, Filippos
+  date: 2020
+  page-range: 1-8
+  parent:
+    type: proceedings
+    title: "Photonic Networks; 21th ITG-Symposium"
+    issue: ''
+    volume: 0
+
+
+'cite-christou-2022-plug':
+  type: article
+  title: "Towards a Hybrid Architecture by Introducing Coherent Pluggable Transceivers in IP-Optical Core Networks with Optical Cross-Connects"
+  author:
+    - Christou, Filippos
+    - Enderle, Tobias
+    - Witt, Arthur
+  date: 2022
+  page-range: 1-8
+  parent:
+    type: proceedings
+    title: "Photonic Networks; 23th ITG-Symposium"
+    issue: ''
+    volume: 0
+
+'cite-ahmad-2023':
+  type: article
+  title: "Security in Intent-Based Networking: Challenges and Solutions"
+  author:
+    - Ahmad, Ijaz
+    - Malinen, Jere
+    - Christou, Filippos
+    - Porambage, Pawani
+    - Kirstädter, Andreas
+    - Suomalainen, Jani
+  date: 2023
+  page-range: 296-301
+  doi: 10.1109/CSCN60443.2023.10453125
+  parent:
+    type: proceedings
+    title: "2023 IEEE Conference on Standards for Communications and Networking (CSCN)"
+    issue: ''
+    volume: 0
+
+'cite-christou-2023-ondm':
+  type: article
+  title: "Availability Estimation of Optical Network Links Using Multilevel Bayesian Modeling"
+  author:
+    - Christou, Filippos
+  date: 2023
+  page-range: 1-6
+  doi: 10.23919/ONDM57372.2023.10144877
+  parent:
+    type: proceedings
+    title: "2023 International Conference on Optical Network Design and Modeling (ONDM)"
+    issue: ''
+    volume: 0
+
+'cite-christou-2023-itg-dag':
+  type: article
+  title: "Grooming Connectivity Intents in IP-Optical Networks Using Directed Acyclic Graphs"
+  author:
+    - Christou, Filippos
+    - Kirstaedter, Andreas
+  date: 2023
+  page-range: 1-4
+  parent:
+    type: proceedings
+    title: "Photonic Networks; 24th ITG-Symposium"
+    issue: ''
+    volume: 0
+
+'cite-christou-2023-mindful':
+  type: report
+  title: "MINDFul.jl: A Framework for Intent-driven Multi-Domain Network coordination"
+  author:
+    - Christou, Filippos
+  date: 2023
+  publisher: arXiv
+  url: https://arxiv.org/abs/2307.02413
+  serial-number: "arXiv:2307.02413"
+  note: "Presented in JuliaCon 2023"
+
+'cite-christou-2023-itnac':
+  type: article
+  title: "Using Intent Directed Acyclic Graphs in Multi-Domain IP-Optical Networks"
+  author:
+    - Christou, Filippos
+    - Kirstädter, Andreas
+  date: 2023
+  page-range: 176-179
+  doi: 10.1109/ITNAC59571.2023.10368533
+  parent:
+    type: proceedings
+    title: "2023 33rd International Telecommunication Networks and Applications Conference (ITNAC)"
+    issue: ''
+    volume: 0
+
+'cite-christou-2024-jocn':
+  type: article
+  title: "Availability estimation of optical network links using a Bayesian model"
+  author:
+    - Christou, Filippos
+  journal: Journal of Optical Communications and Networking
+  date: 2024
+  volume: 16
+  number: 5
+  page-range: B1-B15
+  doi: 10.1364/JOCN.510726
+
+'cite-christou-2025-ecoc':
+  type: article
+  title: "Availability Estimation of External Ip-Optical Network Connections Using Bayesian Modeling"
+  author:
+    - Christou, Filippos
+    - Kirstädter, Andreas
+  date: 2025
+  page-range: 1-4
+  doi: 10.1109/ECOC66593.2025.11263231
+  parent:
+    type: proceedings
+    title: "2025 European Conference on Optical Communications (ECOC)"
+    issue: ''
+    volume: 0
+
+'cite-christou-2025-icc':
+  type: article
+  title: "The Impact of Reinforcement Learning Formulations on Solving the Routing and Spectrum Assignment Problem"
+  author:
+    - Christou, Filippos
+    - Hornek, Nicolas
+    - Kirstädter, Andreas
+  date: 2025
+  page-range: 1445-1451
+  doi: 10.1109/ICC52391.2025.11161534
+  parent:
+    type: proceedings
+    title: "ICC 2025 - IEEE International Conference on Communications"
+    issue: ''
+    volume: 0

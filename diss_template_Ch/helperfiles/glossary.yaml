@@ -1,0 +1,1298 @@
+# Acronyms
+
+dag:
+  short: DAG
+  plural: DAGs
+  long: directed acyclic graph
+  longplural: directed acyclic graphs
+  group: Acronym
+
+ixp:
+  short: IXP
+  plural: IXPs
+  long: internet exchange point
+  longplural: internet exchange points
+  group: Acronym
+
+igp:
+  short: IGP
+  plural: IGPs
+  long: interior gateway protocol
+  longplural: interior gateway protocols
+  group: Acronym
+
+egp:
+  short: EGP
+  plural: EGPs
+  long: exterior gateway protocol
+  longplural: exterior gateway protocols
+  group: Acronym
+
+isp:
+  short: ISP
+  plural: ISPs
+  long: internet service provider
+  longplural: internet service providers
+  group: Acronym
+
+bvt:
+  short: BVT
+  plural: BVTs
+  long: bandwidth-variable transponder
+  longplural: bandwidth-variable transponders
+  group: Acronym
+
+ikr:
+  short: IKR
+  article: the
+  long: institute für kommunikationnetze und rechnersysteme
+  group: Acronym
+
+nn:
+  short: NN
+  long: neural network
+  group: Acronym
+
+ttl:
+  short: TTL
+  long: time to live
+  group: Acronym
+
+kpi:
+  short: KPI
+  long: key performance indicator
+  group: Acronym
+
+pdf:
+  short: PDF
+  long: probability density function
+  group: Acronym
+
+rsvpte:
+  short: RSVP-TE
+  long: resource reservation protocol - traffic engineering
+  group: Acronym
+
+lsp:
+  short: LSP
+  plural: LSPs
+  long: label-switched path
+  group: Acronym
+
+srg:
+  short: SRG
+  plural: SRGs
+  long: shared risk group
+  longplural: shared link groups
+  group: Acronym
+
+srlg:
+  short: SRLG
+  plural: SRLGs
+  long: shared risk link group
+  longplural: shared risk link groups
+  group: Acronym
+
+ppl:
+  short: PPL
+  long: probabilistic programming language
+  group: Acronym
+
+e2e:
+  short: E2E
+  long: end-to-end
+  group: Acronym
+
+ad:
+  short: AD
+  long: automatic differentiation
+  group: Acronym
+
+mils:
+  short: MILS
+  long: minimal identifiable link sequence
+  group: Acronym
+
+ir:
+  short: IR
+  long: intermediate representation
+  group: Acronym
+
+ttf:
+  short: TTF
+  long: time to failure
+  group: Acronym
+
+pmf:
+  short: PMF
+  long: probability mass function
+  group: Acronym
+
+ttr:
+  short: TTR
+  long: time to repair
+  group: Acronym
+
+priam:
+  short: PRIAM
+  long: Provisioning Risk-aware Intents Across Multi-domains
+  group: Acronym
+
+gev:
+  short: GEV
+  long: generalized extreme value
+  group: Acronym
+
+cdf:
+  short: CDF
+  long: cumulative distribution function
+  group: Acronym
+
+odtn:
+  short: ODTN
+  long: open disaggregated transport network
+  group: Acronym
+
+mtbr:
+  short: MTTR
+  long: mean time to repair
+  group: Acronym
+
+mtbf:
+  short: MTTF
+  long: mean time to failure
+  group: Acronym
+
+nbi:
+  short: NBI
+  plural: NBIs
+  long: northbound interface
+  group: Acronym
+
+ewbi:
+  short: EWBI
+  long: east/westbound interface
+  group: Acronym
+
+onap:
+  short: ONAP
+  long: open network automation platform
+  group: Acronym
+
+sbi:
+  short: SBI
+  long: southbound interface
+  group: Acronym
+
+fit:
+  short: FIT
+  long: failure in time
+  group: Acronym
+
+nos:
+  short: NOS
+  long: network operating system
+  group: Acronym
+
+pce:
+  short: PCE
+  long: path computation element
+  group: Acronym
+
+hpce:
+  short: H-PCE
+  long: hierarchical PCE
+  group: Acronym
+
+te:
+  short: TE
+  long: traffic engineering 
+  group: Acronym
+
+obgp:
+  short: OBGP
+  long: optical BGP
+  group: Acronym
+
+bgp:
+  short: BGP
+  long: border gateway protocol
+  group: Acronym
+
+ibgp:
+  short: iBGP
+  long: internal BGP
+  group: Acronym
+
+ebgp:
+  short: eBGP
+  long: external BGP
+  group: Acronym
+
+tcp:
+  short: TCP
+  long: transmission control protocol
+  group: Acronym
+
+nlri:
+  short: NLRI
+  long: network-layer reachability information
+  group: Acronym
+
+isis:
+  short: IS-IS
+  long: intermediate system-to-intermediate system
+  group: Acronym
+
+ospf:
+  short: OSPF
+  long: open shortest path first
+  group: Acronym
+
+grmbsca:
+  short: GRMBSCA
+  long: grooming, routing, modulation, band, spectrum, and core assignment
+  group: Acronym
+
+ksp:
+  short: KSP
+  long: k-shortest paths
+  group: Acronym
+
+as:
+  short: AS
+  plural: ASs
+  long: autonomous system
+  longplural: autonomous systems
+  group: Acronym
+
+ff:
+  short: FF
+  long: first-fit
+  group: Acronym
+
+kspff:
+  short: KSPFF
+  long: k-shortest paths first-fit
+
+ilp:
+  short: ILP
+  long: integer linear programming
+  group: Acronym
+
+milp:
+  short: MILP
+  long: mixed integer linear programming
+  group: Acronym
+
+rsa:
+  short: RSA
+  long: routing and spectrum assignment
+  group: Acronym
+
+rmsa:
+  short: RMSA
+  long: routing, modulation, and spectrum assignment
+  group: Acronym
+
+sdn:
+  short: SDN
+  long: software-defined networking
+  group: Acronym
+
+rl:
+  short: RL
+  long: reinforcement learning
+  group: Acronym
+
+mcf:
+  short: MCF
+  long: multi-core fiber 
+  group: Acronym
+
+sdm:
+  short: SDM
+  long: space division multiplexing
+  group: Acronym
+
+ip:
+  short: IP
+  long: internet protocol
+  group: Acronym
+
+qos:
+  short: QoS
+  long: quality of service
+  group: Acronym
+
+ai:
+  short: AI
+  long: artificial intelligence
+  group: Acronym
+
+ml:
+  short: ML
+  long: machine learning
+  group: Acronym
+
+iot:
+  short: IoT
+  long: internet of things
+  group: Acronym
+
+ip:
+  short: IP
+  long: internet protocol
+  group: Acronym
+
+tco:
+  short: TCO
+  long: total cost of ownership
+  group: Acronym
+
+osi:
+  short: OSI
+  long: open systems interconnection
+  group: Acronym
+
+iso:
+  short: ISO
+  long: international organization for standardization
+  group: Acronym
+
+otn:
+  short: OTN
+  long: optical transport network
+  group: Acronym
+
+tcp:
+  short: TCP
+  long: transmission control protocol
+  group: Acronym
+
+udp:
+  short: UDP
+  long: user datagram protocol
+  group: Acronym
+
+http:
+  short: HTTP
+  long: hypertext transfer protocol
+  group: Acronym
+
+smtp:
+  short: SMTP
+  long: simple mail transfer protocol
+  group: Acronym
+
+sonet:
+  short: SONET
+  long: synchronous optical network
+  group: Acronym
+
+sdh:
+  short: SDH
+  long: synchronous digital hierarchy
+  group: Acronym
+
+tdm:
+  short: TDM
+  long: time division multiplexing 
+  group: Acronym
+
+fdm:
+  short: FDM
+  long: frequency division multiplexing 
+  group: Acronym
+
+wdm:
+  short: WDM
+  long: wavelength division multiplexing 
+  group: Acronym
+
+dwdm:
+  short: DWDM
+  long: dense WDM
+  group: Acronym
+
+pdh:
+  short: PDH
+  long: plesiochronous digital hierarchy 
+  group: Acronym
+
+sla:
+  short: SLA
+  plural: SLAs
+  long: service-level agreement
+  longplural: service-level agreements
+  group: Acronym
+
+pon:
+  short: PON
+  plural: PONs
+  long: passive optical network
+  longplural: passive optical networks
+  group: Acronym
+
+ibn:
+  short: IBN
+  long: intent-based networking
+  group: Acronym
+
+opu:
+  short: OPU
+  long: optical payload unit
+  group: Acronym
+
+odu:
+  short: ODU
+  long: optical data unit
+  group: Acronym
+
+otu:
+  short: OTU
+  long: optical transport unit
+  group: Acronym
+
+fec:
+  short: FEC
+  long: forward error correction
+  group: Acronym
+
+oxc:
+  short: OXC
+  long: optical cross-connect
+  group: Acronym
+
+fttx:
+  short: FTTx
+  long: fiber-to-the-x
+  group: Acronym
+
+ftth:
+  short: FTTH
+  long: fiber-to-the-home
+  group: Acronym
+
+oam:
+  short: OAM
+  long: operations, administration, and maintenance
+  group: Acronym
+
+nuts:
+  short: NUTS
+  long: no-U-turn sampler
+  group: Acronym
+
+hmc:
+  short: HMC
+  long: Hamiltonian Monte Carlo
+  group: Acronym
+
+mcmc:
+  short: MCMC
+  long: Markov chain Monte Carlo
+  group: Acronym
+
+ospf:
+  short: OSPF
+  long: open shortest path first
+  group: Acronym
+
+roadm:
+  short: ROADM
+  long: reconfigurable optical add-drop multiplexer
+  group: Acronym
+
+igp:
+  short: IGP
+  long: interior gateway protocol
+  group: Acronym
+
+mpls:
+  short: MPLS
+  long: multiprotocol label switching
+  group: Acronym
+
+gmpls:
+  short: GMPLS
+  long: generalized MPLS
+  group: Acronym
+
+ipodwdm:
+  short: IPoDWDM
+  long: IP-over-DWDM
+  group: Acronym
+
+dsp:
+  short: DSP
+  long: digital signal processing
+  group: Acronym
+
+ase:
+  short: ASE
+  long: amplified spontaneous emissions
+  group: Acronym
+
+ess:
+  short: ESS
+  long: effective sample size
+  group: Acronym
+
+
+pmd:
+  short: PMD
+  long: polarization-mode dispersion
+  group: Acronym
+
+icn:
+  short: ICN
+  long: information-centric networking
+  group: Acronym
+
+pit:
+  short: PIT
+  long: pending interest table
+  group: Acronym
+
+spm:
+  short: SPM
+  long: self-phase modulation
+  group: Acronym
+
+tapi:
+  short: T-API
+  long: transport API
+  group: Acronym
+
+xpm:
+  short: XPM
+  long: cross-phase modulation
+  group: Acronym
+
+fwm:
+  short: FWM
+  long: four-wave mixing
+  group: Acronym
+
+osnr:
+  short: OSNR
+  long: optical signal-to-noise ratio
+  group: Acronym
+
+gnmi:
+  short: gNMI
+  long: gRPC network management interface
+  group: Acronym
+
+hvi:
+  short: HVI
+  long: highest value interval
+  group: Acronym
+
+grpc:
+  short: gRPC
+  long: remote procedure calls
+  group: Acronym
+
+gnn:
+  short: GNN
+  long: graph neural network
+  group: Acronym
+
+vim:
+  short: VIM
+  long: virtual infrastructure manager
+  group: Acronym
+
+vnf:
+  short: VNF
+  long: virtual network function
+  group: Acronym
+
+ned:
+  short: NED
+  long: normalized edge density
+  group: Acronym
+
+lstm:
+  short: LSTM
+  long: long short-term memory
+  group: Acronym
+
+pbnm:
+  short: PBNM
+  long: policy-based network management
+  group: Acronym
+
+eca:
+  short: ECA
+  long: event-condition-action
+  group: Acronym
+
+hdi:
+  short: HDI
+  long: highest density interval
+  group: Acronym
+
+rmse:
+  short: RMSE
+  long: root mean square error
+  group: Acronym
+
+oeo:
+  short: O-E-O
+  long: optical-electrical-optical
+  group: Acronym
+
+eon:
+  short: EON
+  plural: EONs
+  long: elastic optical networks
+  longplural: elastic optical networks
+  group: Acronym
+
+lhs:
+  short: LHS
+  long: left-hand side
+  group: Acronym
+
+rhs:
+  short: RHS
+  long: right-hand side
+  group: Acronym
+
+rv:
+  short: RV
+  long: random variable
+  group: Acronym
+
+# Glossary
+
+
+topologyvariability:
+  short: topology variability
+  group: Glossary
+
+hyperlink:
+  short: hyperlink
+  group: Glossary
+
+accessnetwork:
+  short: access network
+  group: Glossary
+
+metronetwork:
+  description: metropolitan
+  short: metro network
+  group: Glossary
+
+corenetwork:
+  description: backbone network
+  short: core network
+  group: Glossary
+
+backbonenetwork:
+  description: core network
+  short: backbone network
+  group: Glossary
+
+besteffort:
+  short: best-effort
+  group: Glossary
+
+conjugateprior:
+  short: conjugate prior
+  group: Glossary
+
+iprouter:
+  short: IP router
+  group: Glossary
+
+ipoptical:
+  short: IP-optical
+  group: Glossary
+
+multidomain:
+  short: multi-domain
+  group: Glossary
+
+singledomain:
+  short: single-domain
+  group: Glossary
+
+ibnoversdn:
+  short: IBN-over-SDN
+  group: Glossary
+
+ibnintosdn:
+  short: IBN-into-SDN
+  group: Glossary
+
+intentdelegation:
+  short: intent delegation
+  group: Glossary
+
+intentsplitting:
+  short: intent splitting
+  group: Glossary
+
+availabilitysensitivity:
+  short: availability sensitivity
+  group: Glossary
+
+mindfuljl:
+  short: MINDFul.jl
+  group: Glossary
+
+teraflowsdn:
+  short: TeraFlowSDN
+  group: Glossary
+
+intradomain:
+  short: intra-domain
+  group: Glossary
+
+crossdomain:
+  short: cross-domain
+  group: Glossary
+
+interdomain:
+  short: inter-domain
+  group: Glossary
+
+lightpath:
+  short: lightpath
+  group: Glossary
+
+fixedgrid:
+  short: fixed-grid
+  group: Glossary
+
+flexgrid:
+  short: flex-grid
+  group: Glossary
+
+networkdimensioning:
+  short: network dimensioning
+  group: Glossary
+
+spectrumcontinuity:
+  short: spectrum continuity
+  group: Glossary
+
+spectrumcontiguity:
+  short: spectrum contiguity
+  group: Glossary
+
+opticalreach:
+  short: optical reach
+  group: Glossary
+
+grooming:
+  short: grooming
+  group: Glossary
+
+disaggregation:
+  short: disaggregation
+  group: Glossary
+
+privatepeering:
+  short: private peering
+  group: Glossary
+
+publicpeering:
+  short: public peering
+  group: Glossary
+
+openzrp:
+  short: OpenZR+
+  group: Glossary
+
+openroadm:
+  short: OpenROADM
+  group: Glossary
+
+openflow:
+  short: OpenFlow
+  group: Glossary
+
+netconf:
+  short: NETCONF
+  group: Glossary
+
+yang:
+  short: YANG
+  group: Glossary
+
+openconfig:
+  short: OpenConfig
+  group: Glossary
+
+onos:
+  short: ONOS
+  group: Glossary
+
+opendaylight:
+  short: OpenDaylight
+  group: Glossary
+
+reliability:
+  short: reliability
+  group: Glossary
+
+longtaileffect:
+  short: long-tail effect
+  group: Glossary
+
+intentmetric:
+  short: intent metric
+  group: Glossary
+
+steadystateavailability:
+  short: steady-state availability
+  description: availability, true availability
+  group: Glossary
+
+availability:
+  short: availability
+  description: steady-state availability, true availability
+  group: Glossary
+
+weaklyinformativeprior:
+  short: weakly informative prior
+  group: Glossary
+
+experiencedavailability:
+  short: experienced availability
+  group: Glossary
+
+availabilitymetric:
+  short: availability metric
+  group: Glossary
+
+hotpotato:
+  short: hot-potato
+  group: Glossary
+
+availabilityspecification:
+  short: availability specification
+  group: Glossary
+
+intervalavailability:
+  short: interval availability
+  group: Glossary
+
+trueavailability:
+  short: true availability
+  description: availability, steady-state availability
+  group: Glossary
+
+survivability:
+  short: survivability
+  group: Glossary
+
+uptime:
+  short: uptime
+  group: Glossary
+
+downtime:
+  short: downtime
+  group: Glossary
+
+zerodisclosure:
+  short: zero-disclosure
+  group: Glossary
+
+prioranalysis:
+  short: prior analysis
+  group: Glossary
+
+protection:
+  short: protection
+  group: Glossary
+
+intentwashing:
+  short: intent washing
+  group: Glossary
+
+dedicatedprotection:
+  short: dedicated protection
+  group: Glossary
+
+sharedprotection:
+  short: shared protection
+  group: Glossary
+
+resourcemetric:
+  short: resource metric
+  group: Glossary
+
+restoration:
+  short: restoration
+  group: Glossary
+
+firstordermetric:
+  short: first-order metric
+  group: Glossary
+
+secondordermetric:
+  short: second-order metric
+  group: Glossary
+
+thirdordermetric:
+  short: third-order metric
+  group: Glossary
+
+higherordermetric:
+  short: higher-order metric
+  group: Glossary
+
+networktomography:
+  short: network tomography
+  group: Glossary
+
+topologyinference:
+  short: topology inference
+  group: Glossary
+
+lowlevelintent:
+  short: low-level intent
+  group: Glossary
+
+sladecomposition:
+  short: SLA decomposition
+  group: Glossary
+
+justabovethreshold:
+  short: just-above-threshold
+  group: Glossary
+
+conjugateprior:
+  short: conjugate prior
+  group: Glossary
+
+compliancetarget:
+  short: compliance target
+  group: Glossary
+
+# Symbol
+
+sD:
+  short: $D$
+  description: $$@downtime:pl:short:noref
+  group: Symbol
+
+sDe:
+  short: $D_e$
+  description: $$@downtime:pl:short:noref of a link $e in $ @sE:short:noref
+  group: Symbol
+
+sU:
+  short: $U$
+  description: $$@uptime:pl:short:noref
+  group: Symbol
+
+sUe:
+  short: $U_e$
+  description: $$@uptime:pl:short:noref of a link $e in $ @sE:short:noref
+  group: Symbol
+
+sDp:
+  short: $D'$
+  description: uninterrupted @downtime:pl:short:noref. $|D'|$ is the number of repairs
+  group: Symbol
+
+sDpe:
+  short: $D'_e$
+  description: uninterrupted @downtime:pl:short:noref of a link $e in $ @sE:short:noref
+  group: Symbol
+
+sUp:
+  short: $U'$
+  description: uninterrupted @uptime:pl:short:noref. $|U'|$ is the number of failures
+  group: Symbol
+
+sUpe:
+  short: $U'_e$
+  description: uninterrupted @uptime:pl:short:noref of a link $e in $ @sE:short:noref
+  group: Symbol
+
+srh: 
+  short: $hat(r)$
+  description: $$@sr:short:noref estimate
+  group: Symbol
+
+sr: 
+  short: $r$
+  description: $$@trueavailability:short:noref[true] @mtbr:short:noref of all links @sE:short:noref
+  group: Symbol
+
+sfhe: 
+  short: $hat(f_e)$
+  description: $$@sfe:short:noref estimate
+  group: Symbol
+
+sae: 
+  short: $a_e$
+  description: $$@trueavailability:short:noref of a link $e in $ @sE:short:noref
+  group: Symbol
+
+sahe: 
+  short: $hat(a_e)$
+  description: availability estimate given @sfhe:short:noref and @srh:short:noref
+  group: Symbol
+
+sfe: 
+  short: $f_e$
+  description: $$@trueavailability:short:noref[true] @mtbf:short:noref of a link $e in $ @sE:short:noref
+  group: Symbol
+
+sar:
+  short: $alpha_r$
+  description: shape parameter of InverseGamma modeling @srh:short:noref 
+  group: Symbol
+
+sbr:
+  short: $beta_r$
+  description: scale parameter of InverseGamma modeling @srh:short:noref 
+  group: Symbol
+
+safe:
+  short: $alpha_f$
+  description: shape parameter of InverseGamma modeling @sfhe:short:noref
+  group: Symbol
+
+sbfe:
+  short: $beta_f^e$
+  description: scale parameter of InverseGamma modeling @sfhe:short:noref
+  group: Symbol
+
+sE: 
+  short: $E$
+  description: physical links (edges) of a network topology
+  group: Symbol
+
+sfb:
+  short: $breve(f)$
+  description: estimation function of @sfe:short:noref over continuous link length
+  group: Symbol
+
+sab:
+  short: $breve(a)$
+  description: availability estimation function given @sfb:short:noref and @srh:short:noref
+  group: Symbol
+
+sle:
+  short: $l_e$
+  description: length of link $e in $ @sE:short:noref 
+  group: Symbol
+
+ss:
+  short: $s$
+  description: proportionality factor of the reciprocal relationship modeling @sfb:short:noref
+  group: Symbol
+
+sk:
+  short: $k$
+  description: constant term of the reciprocal relationship modeling @sfb:short:noref
+  group: Symbol
+
+sak:
+  short: $alpha_k$
+  description: shape parameter of Gamma modeling @sk:short:noref
+  group: Symbol
+
+sbk:
+  short: $beta_k$
+  description: scale parameter of Gamma modeling @sk:short:noref
+  group: Symbol
+
+sas:
+  short: $alpha_s$
+  description: shape parameter of Gamma modeling @ss:short:noref
+  group: Symbol
+
+sbs:
+  short: $beta_s$
+  description: scale parameter of Gamma modeling @ss:short:noref
+  group: Symbol
+
+sH:
+  short: $H$
+  description: hyperlinks set
+  group: Symbol
+
+sDh:
+  short: $D_h$
+  description: $$@downtime:pl:short:noref of a hyperlink $h in $ @sH:short:noref
+  group: Symbol
+sUh:
+  short: $U_h$
+  description: $$@uptime:pl:short:noref of a hyperlink $h in $ @sH:short:noref
+  group: Symbol
+sDph:
+  short: $D'_h$
+  description: uninterrupted @downtime:pl:short:noref of a hyperlink $h in $ @sH:short:noref
+  group: Symbol
+sUph:
+  short: $U'_h$
+  description: uninterrupted @uptime:pl:short:noref of a hyperlink $h in $ @sH:short:noref
+  group: Symbol
+
+sRHO:
+  short: $hat(rho)$
+  description: $$@mtbr:short:noref estimate of all hyperlinks @sH:short:noref
+  group: Symbol
+
+sPHIhh:
+  short: $hat(phi_h)$
+  description: $$@mtbf:short:noref estimate of a hyperlink $h in $ @sH:short:noref
+  group: Symbol
+
+sPHIhn: 
+  short: $hat(phi_n)$
+  description: $$@mtbf:short:noref estimate of a @crossdomain:short:noref connection $n in$ @sNp:short:noref
+  group: Symbol
+
+sPHIhnH: 
+  short: $hat(phi_n^H)$
+  description: $$@mtbf:short:noref estimate of a @crossdomain:short:noref connection $n in $ @sNp:short:noref, \ considering only the influence of the hyperlinks @sHn:short:noref, \ by averaging over @sPHIhc:short:noref $forall med c in $ @sCn:short:noref.
+  group: Symbol
+
+sB:
+  short: $B$
+  description: $$@crossdomain:short:noref border nodes
+  group: Symbol
+sT:
+  short: $T$
+  description: $$@crossdomain:short:noref target nodes
+  group: Symbol
+sN:
+  short: $N$
+  description: internal node pair combinations defining an \ @intradomain:short:noref connection
+  group: Symbol
+sNp:
+  short: $N'$
+  description: external node pair combinations (@sB:short:noref $times$ @sT:short:noref) defining \ @crossdomain:short:noref connections @sC
+  group: Symbol
+sC:
+  short: $C$
+  description: $$@crossdomain:short:noref connections between @sNp:short:noref $=$ @sB:short:noref $times$ @sT:short:noref
+  group: Symbol
+sHc:
+  short: $H_c$
+  description: hyperlinks involved in a connection $c in$ @sC:short:noref
+  group: Symbol
+
+sPHIhb: 
+  short: $hat(phi_b)$
+  description: $$@mtbf:short:noref estimate based on a border node $b in $ @sB:short:noref
+  group: Symbol
+
+sPHIht: 
+  short: $hat(phi_t)$
+  description: $$@mtbf:short:noref estimate based on an external target node $t in $ @sT:short:noref
+  group: Symbol
+
+sPHIhc: 
+  short: $hat(phi_c)$
+  description: $$@mtbf:short:noref estimate of a @crossdomain:short:noref connection $c in $ @sC:short:noref, \ based on the @sPHIhh:short:noref of the serial hyperlinks $h in $ @sHc:short:noref
+  group: Symbol
+
+sDpc:
+  short: $D'_c$
+  description: uninterrupted @downtime:pl:short:noref of a connection $c in $ @sC:short:noref
+  group: Symbol
+
+sUpc:
+  short: $U'_c$
+  description: uninterrupted @uptime:pl:short:noref of a connection $c in $ @sC:short:noref
+  group: Symbol
+
+sDc:
+  short: $D_c$
+  description: $$@downtime:pl:short:noref of a connection $c in $ @sC:short:noref
+  group: Symbol
+
+sUc:
+  short: $U_c$
+  description: $$@uptime:pl:short:noref of a connection $c in $ @sC:short:noref
+  group: Symbol
+
+sNc:
+  short: $N_c$
+  description: source and destination node pair of a connection $c in $ @sC:short:noref
+  group: Symbol
+
+sCn:
+  short: $C_n$
+  description: connections between a node pair $n in$ @sNp:short:noref
+  group: Symbol
+
+slc:
+  short: $l_c$
+  description: connection distance (length) of $c in$ @sC:short:noref
+  group: Symbol
+
+sCh:
+  short: $C_h$
+  description: connections containing a hyperlink $h in$ @sH:short:noref
+  group: Symbol
+
+sHn:
+  short: $H_n$
+  description: hyperlinks involved in connections @sCn:short:noref
+  group: Symbol
+
+saRHO:
+  short: $alpha_rho$
+  description: shape parameter of InverseGamma modeling @sRHO:short:noref, \ with prior being the posterior of @sar:short:noref
+  group: Symbol
+
+sbRHO:
+  short: $beta_rho$
+  description: scale parameter of InverseGamma modeling @sRHO:short:noref, \ with prior being the posterior of @sbr:short:noref
+  group: Symbol
+
+sPPHIh:
+  short: $Phi_h$
+  description: prior for @sPHIhh:short:noref
+  group: Symbol
+
+sPPHIb:
+  short: $Phi_b$
+  description: prior for @sPHIhb:short:noref
+  group: Symbol
+
+sPPHIt:
+  short: $Phi_t$
+  description: prior for @sPHIht:short:noref
+  group: Symbol
+
+sP:
+  short: $P$
+  description: all possible internal paths
+  group: Symbol
+
+sPn:
+  short: $P_n$
+  description: past logged internal paths used between an internal \ node pair $n in $ @sN:short:noref
+  group: Symbol
+
+sMp:
+  short: $M_p$
+  description: number of times that path $p in P$ has been deployed 
+  group: Symbol
+
+sRhat:
+  short: $hat(R)$
+  description: potential scale reduction factor, also known as R-hat
+  group: Symbol
+
+sdG:
+  short: $d_G$
+  description: the standard deviation of the link distances in topology $G$
+  group: Symbol
+
+
