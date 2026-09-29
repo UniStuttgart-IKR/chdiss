@@ -25,7 +25,6 @@
   subfigures,
   subfig,
   table-figure,
-  callout,
   gridequations,
   algo-block,
   CleanProcedure,

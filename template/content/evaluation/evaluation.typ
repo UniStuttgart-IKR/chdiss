@@ -36,20 +36,13 @@
 ) <tab_simulationparameters>
 ])
 
-#FUNCS.callout(
-  title: "Simulation Benchmark",
-  [#lorem(20) #myqty(500, "ms").]
-)
-
 === Metric Taxonomy
 The performance evaluation uses structured metric definitions demonstrated below:
 #list(
   [*M1* <KPI_M1>: #lorem(12)],
   [*M2* <KPI_M2>: #lorem(12)],
-  [*GROUP-A* <KPI_GROUP-A>: #lorem(12)],
-  [*GROUP-B* <KPI_GROUP-B>: #lorem(12)],
-  [*ACCURACY* <KPI_ACCURACY>: #lorem(12)],
-  [*ERROR* <KPI_ERROR>: #lorem(12)]
+  [*M3* <KPI_M3>: #lorem(12)],
+  [*M4* <KPI_M4>: #lorem(12)]
 )
 
 == Algorithmic Formulations and Numerical Results <sec_eval_results>
@@ -83,8 +76,8 @@ The performance evaluation uses structured metric definitions demonstrated below
   kind: "algorithm",
 ) <alg_hyperlinks>
 
-#lorem(25) @alg_hyperlinks. #lorem(20) #baselineref() #kpi("GROUP-A") and #kpi("GROUP-B").
-#lorem(20) #kpi("M1", "GROUP-A", "ERROR") #lorem(15) #myqty(40, "%").
+#lorem(25) @alg_hyperlinks. #lorem(20) #baselineref() #rkpi("M1") and #rkpi("M2").
+#lorem(20) #kpi("M1", "M2", "M3") #lorem(15) #myqty(40, "%").
 #lorem(20) @fig_eval_subfigures.
 
 #htmlplace(top+center, [
@@ -105,7 +98,7 @@ The performance evaluation uses structured metric definitions demonstrated below
 
     [#figure(
       image("../../figures/allflatsimfigs/mass__SD_ikpi_estim-true.pdf"),
-      caption: [Performance in Scenario A.],
+      caption: [#kpi("M1", "M2", "M3")],
       kind: "subfigure",
       supplement: none,
       numbering: "a",
@@ -114,7 +107,7 @@ The performance evaluation uses structured metric definitions demonstrated below
 
     [#figure(
       image("../../figures/allflatsimfigs/mass__MD_ikpi_estim-true.pdf"),
-      caption: [Performance in Scenario B.],
+      caption: [#kpi("M1", "M2", "M4")],
       kind: "subfigure",
       supplement: none,
       numbering: "a",
@@ -123,7 +116,7 @@ The performance evaluation uses structured metric definitions demonstrated below
 
 
   ),
-  caption: [Comparative performance evaluation across simulation scenarios.],
+  caption: [#kpi("M1", "M2", ("M3", "M4")).],
   kind: image,
 ) <fig_eval_subfigures>
 ])

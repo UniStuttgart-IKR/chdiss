@@ -458,21 +458,6 @@
   )
 }
 
-#let callout(title: "Note", body, fill: luma(245), stroke: 0.5pt + luma(180)) = {
-  rect(
-    width: 100%,
-    fill: fill,
-    stroke: stroke,
-    radius: 4pt,
-    inset: (x: 1em, y: 0.8em),
-    [
-      #if title != none [*#title:* ]
-      #body
-    ]
-  )
-}
-
-
 #let gridequations(main-label, ..cells) = block[
   #counter(math.equation).step()
   #counter("subeq").update(0)

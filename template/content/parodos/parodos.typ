@@ -26,7 +26,7 @@
 == Research Objectives
 #lorem(50)
 
-#lorem(35) @ipoptical, @zerodisclosure, @sle, @sar, @mcmc, @experiencedavailability. #lorem(20) #kpi("M1", "GROUP-A", "ACCURACY").
+#lorem(35) @ipoptical, @zerodisclosure, @sle, @sar, @mcmc, @experiencedavailability. #lorem(20)
 
 The remainder of this thesis is organized as follows:
 @sec_groundrelatedwork provides theoretical background and literature review.

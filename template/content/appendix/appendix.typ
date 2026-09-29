@@ -16,7 +16,7 @@ $ f(x | mu, sigma) = frac(1, sigma sqrt(2 pi)) exp lr(- frac((x - mu)^2, 2 sigma
 #lorem(35)
 
 #figure(
-  image("../../figures/inkscape/contr_hyperlinks.pdf", width: 65%),
+  image("../../figures/inkscape/contr_hyperlinks.pdf", width: 100%),
   caption: [Supplementary diagram in appendix.],
 ) <fig_app_hyperlinks>
 
