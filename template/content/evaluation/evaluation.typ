@@ -89,6 +89,49 @@ The performance evaluation focuses on the following key metrics:
 
 #lorem(25) @alg_hyperlinks. #lorem(20) #baselineref() #kpi("ID") and #kpi("CD").
 #lorem(20) #kpi("RW", "ID", "path-rmse") #lorem(15) #myqty(40, "%").
+#lorem(20) @fig_mass__MD_ikpi_estim-true.
+
+#htmlplace(top+center, [
+#counter(figure.where(kind: "subfigure")).update(0)
+#figure(
+  table(
+    columns: (1fr, 1fr),
+    column-gutter: 0.1em,
+    row-gutter: -0.6em,
+    align: horizon,
+    stroke: none,
+
+    table.cell(
+      colspan: 2,
+      align: center,
+      image("../../figures/allflatsimfigs/triplegend_estimtrue.pdf"),
+    ),
+
+    [#figure(
+      image("../../figures/allflatsimfigs/mass__SD_ikpi_estim-true.pdf"),
+      caption: [#kpi("RW", "ID", "estimation-accuracy")],
+      kind: "subfigure",
+      supplement: none,
+      numbering: "a",
+      outlined: false,
+    ) <fig_mass__MD_ikpi_estim-true_SD>],
+
+    [#figure(
+      image("../../figures/allflatsimfigs/mass__MD_ikpi_estim-true.pdf"),
+      caption: [#kpi("RW", "CD", "estimation-accuracy")],
+      kind: "subfigure",
+      supplement: none,
+      numbering: "a",
+      outlined: false,
+    ) <fig_mass__MD_ikpi_estim-true_MD>],
+
+
+  ),
+  caption: [#kpi("RW", ("ID", "CD"), "estimation-accuracy").],
+  kind: image,
+) <fig_mass__MD_ikpi_estim-true>
+])
+
 
 #FUNCS.table-figure(
   caption: [Performance comparison between baseline and proposed models using the `table-figure` helper function.],
