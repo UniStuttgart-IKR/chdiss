@@ -1,32 +1,29 @@
 #import "@local/chdiss:0.1.0": *
 
-This chapter introduces our intent-driven framework and formulates the underlying availability models.
-We first detail the lifecycle state machine and then provide the rigorous mathematical specification using our hierarchical Bayesian model.
+#lorem(45)
 
-== Multi-domain Intent Architecture <sec_intentdrivenarchitecture>
+== System Architecture and Workflow <sec_intentdrivenarchitecture>
 #lorem(50)
 
-An intent lifecycle transitions through several states from initialization to successful installation.
-A lightpath can be categorized as a #roitc("starting") <oitc_starting> or #roitc("ending") <oitc_ending> segment across administrative boundaries.
-@fig_contr_arch_statemachineexample illustrates four distinct phases of the intent state machine using our 2x2 subfigure template helper.
+#lorem(35) #roitc("starting") <oitc_starting> or #roitc("ending") <oitc_ending>.
+@fig_contr_arch_statemachineexample illustrates four distinct phases of the state machine using the 2x2 subfigure template helper.
 
 #FUNCS.subfigures(
   columns: (1fr, 1fr),
   gutter: 0.6em,
-  caption: [Intent lifecycle state machine transitions using the template subfigures helper.],
-  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine1.pdf"), caption: [Installed intent]) <fig_statemachine1>],
-  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine2.pdf"), caption: [Failure signal propagates]) <fig_statemachine2>],
-  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine3.pdf"), caption: [Partial recompilation]) <fig_statemachine3>],
-  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine4.pdf"), caption: [Installation signal propagates]) <fig_statemachine4>],
+  caption: [State machine transitions using the template subfigures helper.],
+  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine1.pdf"), caption: [Phase 1: Initial state]) <fig_statemachine1>],
+  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine2.pdf"), caption: [Phase 2: Signal propagation]) <fig_statemachine2>],
+  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine3.pdf"), caption: [Phase 3: Reconfiguration]) <fig_statemachine3>],
+  [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine4.pdf"), caption: [Phase 4: Final state]) <fig_statemachine4>],
 ) <fig_contr_arch_statemachineexample>
 
-Referencing specific stages is straightforward, e.g., viewing phase #r("fig_statemachine1") during normal operation.
+#lorem(20) #r("fig_statemachine1") #lorem(15)
 
-== Hierarchical Bayesian Model Specification <sec_bayesianmodels>
+== Mathematical Model Specification <sec_bayesianmodels>
 #lorem(45)
 
-We formulate the system of equations for intra-domain link availability below in #wr(<eq_internal_bayesian_model>).
-This complex multi-equation structure is typeset using our custom `gridequations` function, generating aligned relations, horizontal centering, display math, and subequation anchors.
+#lorem(25) #wr(<eq_internal_bayesian_model>). #lorem(20)
 
 #htmlplace(bottom+center, [
 #FUNCS.gridequations(
@@ -48,6 +45,6 @@ This complex multi-equation structure is typeset using our custom `gridequations
 )
 ])
 
-As seen in #wr(<eq_ibm_downtimeigam>) and #wr(<eq_ibm_uptimeigam>), downtime and uptime follow hierarchical InverseGamma distributions.
-The parameters are linked through link length @sle and scale hyperpriors @sk, @ss.
-When evaluating prediction quality, metrics such as #rkpi("path-rmse") or the composite key indicator #kpi("BL", "ID", "path-rmse") demonstrate the precision of the model.
+#lorem(20) #wr(<eq_ibm_downtimeigam>) and #wr(<eq_ibm_uptimeigam>).
+#lorem(20) @sle, @sk, @ss.
+#lorem(25) #rkpi("path-rmse") or #kpi("BL", "ID", "path-rmse").

@@ -1,13 +1,11 @@
 #import "@local/chdiss:0.1.0": *
 
-This chapter presents the empirical evaluation and benchmarking of our proposed mechanism.
-We evaluate availability prediction accuracy, algorithm execution runtime, and operational metrics across synthetic and realistic network topologies.
+#lorem(50)
 
 == Simulation Settings and Performance Metrics <sec_simulationsettings>
 #lorem(45)
 
-We conduct extensive event-driven simulations under varied topological conditions.
-Key simulation settings are summarized in @tbl:tab_simulationparameters.
+#lorem(30) @tbl:tab_simulationparameters.
 
 #htmlplace(center, [
 #figure(
@@ -24,7 +22,7 @@ Key simulation settings are summarized in @tbl:tab_simulationparameters.
       table.header(
         [*Setting*], [*Abbr.*], [*Values*]
       ),
-      [Topology], [TP <TP>], [Germany-France (GF), Abilene-Canada (AC)],
+      [Topology], [TP <TP>], [Network Alpha, Network Beta],
       [Inter-domain links], [IL <IL>], [3, 6],
       [Simulation horizon], [SH <SH>], [#myqty(1, "yr"), #myqty(5, "yr")],
       [Inter-arrival time], [IAT <IAT>], [#myqty(48, "h"), #myqty(96, "h")],
@@ -40,7 +38,7 @@ Key simulation settings are summarized in @tbl:tab_simulationparameters.
 
 #FUNCS.callout(
   title: "Simulation Benchmark",
-  [All scenarios are executed on an isolated multi-core workstation. Path computation timeout is set to #myqty(500, "ms").]
+  [#lorem(20) #myqty(500, "ms").]
 )
 
 === Metric Taxonomy
@@ -85,25 +83,23 @@ The performance evaluation focuses on the following key metrics:
       })
     }
   ),
-  caption: [DiscoverHyperlinks. Calculates hyperlinks of an external domain.],
+  caption: [DiscoverHyperlinks procedure example.],
   kind: "algorithm",
 ) <alg_hyperlinks>
 
-@alg_hyperlinks specifies the hyperlink discovery algorithm used for cross-domain tomography.
-Numerical results demonstrate that Bayesian inference consistently outperforms the #baselineref() heuristic in both #kpi("ID") and #kpi("CD") scenarios.
-As shown by #kpi("RW", "ID", "path-rmse"), estimation error decreases by up to #myqty(40, "%") under scarce telemetry data.
+#lorem(25) @alg_hyperlinks. #lorem(20) #baselineref() #kpi("ID") and #kpi("CD").
+#lorem(20) #kpi("RW", "ID", "path-rmse") #lorem(15) #myqty(40, "%").
 
 #FUNCS.table-figure(
-  caption: [Performance comparison between baseline and Bayesian models using the `table-figure` helper function.],
+  caption: [Performance comparison between baseline and proposed models using the `table-figure` helper function.],
   columns: (2fr, 1fr, 1fr, 1.2fr),
   align: (left + horizon, center + horizon, center + horizon, center + horizon),
-  header: ([*Evaluation Metric*], [*Baseline (BL)*], [*Bayesian (BY)*], [*Relative Gain*]),
-  [Intra-Domain RMSE], [0.082], [0.049], [-40.2 %],
-  [Cross-Domain RMSE], [0.115], [0.086], [-25.2 %],
+  header: ([*Evaluation Metric*], [*Baseline (BL)*], [*Proposed (BY)*], [*Relative Gain*]),
+  [Metric Alpha], [0.082], [0.049], [-40.2 %],
+  [Metric Beta], [0.115], [0.086], [-25.2 %],
   [SLA Violations / Year], [14.2], [4.1], [-71.1 %],
 ) <tab_benchmark_summary>
 
-@tab_benchmark_summary highlights the key accuracy improvements achieved across all network topologies.
+#lorem(20) @tbl:tab_benchmark_summary.
 
 #FUNCS.lorempages(0.25)
-

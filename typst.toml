@@ -2,7 +2,7 @@
 name = "chdiss"
 version = "0.1.0"
 entrypoint = "lib.typ"
-authors = ["Filippos Christou <filchristou@outlook.com>"]
+authors = ["John Doe <john.doe@example.com>"]
 license = "MIT"
 description = "A comprehensive PhD dissertation template for engineering and computer science at Universität Stuttgart."
 keywords = ["thesis", "dissertation", "university-of-stuttgart", "bayesian"]

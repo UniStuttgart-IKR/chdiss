@@ -1,16 +1,16 @@
 #import "myconstants.typ" as CONSTS
 
 #let generatecoverpage(
-  title: [Availability-Aware Multi-Domain Intent-Driven \ IP-Optical Networking Using Bayesian Modeling],
-  author: "Filippos Christou",
-  birthplace: "Larissa, Griechenland",
-  first_examiner: "Prof. Dr.-Ing. Andreas Kirstädter",
-  second_examiner: "Prof.’in Dr.-Ing. Carmen Mas Machuca",
+  title: [Doctoral Dissertation Title \ Subtitle or Secondary Title of the Work],
+  author: "John Doe",
+  birthplace: "Sample City, Sample Country",
+  first_examiner: "Prof. Dr.-Ing. Jane Smith",
+  second_examiner: "Prof. Dr.-Ing. Alex Johnson",
   faculty: "Fakultät für Informatik, Elektrotechnik und Informationstechnik",
   university: "Universität Stuttgart",
   degree: "Doktor-Ingenieurs (Dr.-Ing.)",
   institute: [Institut für Kommunikationsnetze und Rechnersysteme\ der Universität Stuttgart],
-  submission_date: "19. Juni 2026",
+  submission_date: "1. Januar 2026",
   defense_date: none,
   year: "2026",
   version: none,

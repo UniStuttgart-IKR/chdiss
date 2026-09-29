@@ -1,23 +1,24 @@
 #import "@local/chdiss:0.1.0": *
 
-This final chapter synthesizes the findings of this thesis, highlights key contributions, and outlines promising future research directions.
+#lorem(45)
 
 == Summary of Contributions <sec_conclusion_summary>
 #lorem(50)
 
 #FUNCS.inline-terms(
   style: "bold",
-  ([Decentralized Architecture], [Modular intent compilation and lifecycle management across multi-domain boundaries without sharing internal topologies.]),
-  ([Hierarchical Bayesian Modeling], [Probabilistic estimation of intra-domain link availability and cross-domain connection sensing using hierarchical priors.]),
-  ([Empirical Benchmarking], [Rigorous event-driven simulation confirming that Bayesian inference achieves up to #myqty(40, "%") error reduction over baseline heuristics.])
+  ([System Architecture], [#lorem(15)]),
+  ([Probabilistic Modeling], [#lorem(15)]),
+  ([Empirical Benchmarking], [#lorem(15) #myqty(40, "%") #lorem(5)])
 )
 
 == Future Research Directions <sec_future_work>
 #lorem(70)
 
 Several avenues remain open for future investigation:
-1. Integration of machine-learning-assisted prior calibration to adapt dynamically to seasonal traffic shifts.
-2. Extension of the tomography algorithms to support multi-layer cross-connects and dynamic optical restoration.
-3. Live testbed deployment on programmable hardware pipelines.
+1. #lorem(15)
+2. #lorem(15)
+3. #lorem(15)
 
-In conclusion, combining intent-based networking with Bayesian modeling provides a scalable, principled paradigm for reliable next-generation communication networks.
+#v(1em)
+#lorem(40)

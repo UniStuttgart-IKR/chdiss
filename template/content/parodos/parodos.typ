@@ -6,32 +6,27 @@
 == Motivation and Problem Statement
 #lorem(70)
 
-The rapid growth of @ipoptical networks and @multidomain environments introduces complex management challenges.
-As established in earlier studies #cite("vasseur-2004"), traditional deterministic heuristics struggle in information-scarce scenarios.
-Recent paradigms such as @ibn extending @sdn allow operators to express high-level intents.
-Our previous work #cite("2022Christou") and #cite("christou-2023-mindful") laid foundational steps for decentralized intent management.
+#lorem(35) #cite("vasseur-2004"). #lorem(25) #cite("doe-2022") and #cite("doe-2023").
 
 #FUNCS.todo([Optional: Add a brief overview of specific domain requirements here.])
 
 #FUNCS.fheading([Core Architectural Assumptions])
 #FUNCS.inline-terms(
   style: "bold",
-  ([Confidentiality], [Domains do not disclose internal topology or operational telemetry.]),
-  ([Coordination], [Inter-domain intent negotiation proceeds via peer-to-peer interfaces (e.g., Domain A #FUNCS.arr Domain B).]),
-  ([Stochasticity], [Link failures follow stochastic processes with unknown parameters #im($theta$).])
+  ([Confidentiality], [#lorem(12)]),
+  ([Coordination], [#lorem(12) (e.g., Domain A #FUNCS.arr Domain B).]),
+  ([Stochasticity], [#lorem(12) #im($theta$).])
 )
 
 #figure(
   image("../../figures/inkscape/contr_hyperlinks.pdf", width: 75%),
-  caption: [Overview of multi-domain connectivity and intent orchestration.],
+  caption: [Overview of system architecture and network topology.],
 ) <fig_network_overview>
 
 == Research Objectives
 #lorem(50)
 
-In this thesis, we address these challenges by formulating a probabilistic framework to estimate @availability and enhance @grooming efficiency.
-We model physical characteristics such as link length @sle and shape parameters @sar, incorporating @mcmc sampling for robust inference.
-Key performance indicators, notably #kpi("BL", "ID", "path-rmse"), are thoroughly analyzed.
+#lorem(35) @sle, @sar, @mcmc. #lorem(20) #kpi("BL", "ID", "path-rmse").
 
 The remainder of this thesis is organized as follows:
 @sec_groundrelatedwork provides theoretical background and literature review.

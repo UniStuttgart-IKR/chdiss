@@ -4,12 +4,11 @@
 
 #lorem(50)
 
-In this section, we derive the asymptotic variance for the hierarchical prior specifications.
-Consider a continuous Gaussian likelihood with parameters #im($(mu, sigma)$):
+#lorem(20) #im($(mu, sigma)$):
 
 $ f(x | mu, sigma) = frac(1, sigma sqrt(2 pi)) exp lr(- frac((x - mu)^2, 2 sigma^2)) $ <eq_app_gaussian>
 
-Equation #eqref(<eq_app_gaussian>) defines the distribution used for noise addition.
+#lorem(15) #eqref(<eq_app_gaussian>).
 #lorem(40)
 
 #heading([Supplementary Figures and Algorithms], level: 2, numbering: CONSTS.APPENDIXNUMBERING, outlined: true) <seca_supplementary>
@@ -18,11 +17,11 @@ Equation #eqref(<eq_app_gaussian>) defines the distribution used for noise addit
 
 #figure(
   image("../../figures/inkscape/contr_hyperlinks.pdf", width: 65%),
-  caption: [Supplementary multi-domain interconnection diagram in appendix.],
+  caption: [Supplementary diagram in appendix.],
 ) <fig_app_hyperlinks>
 
-@fig_app_hyperlinks illustrates the physical fiber routing of external border links.
-Furthermore, @alg_app_priority formalizes the secondary path prioritization heuristic.
+#lorem(20) @fig_app_hyperlinks.
+#lorem(20) @alg_app_priority.
 
 #figure(
   FUNCS.algo-block(
@@ -34,12 +33,12 @@ Furthermore, @alg_app_priority formalizes the secondary path prioritization heur
     {
       import algorithmic: *
       FUNCS.CleanProcedure(smallcaps[PrioritizePaths], {
-        Assign[$P^*$][sort $P$ descending by availability]
+        Assign[$P^*$][sort $P$ descending by metric]
         Return([$P^*$])
       })
     }
   ),
-  caption: [Supplementary path prioritization algorithm.],
+  caption: [Supplementary prioritization algorithm.],
   kind: "algorithm",
 ) <alg_app_priority>
 
