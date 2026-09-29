@@ -2,8 +2,8 @@
 
 #lorem(75)
 
-#lorem(60)
+#lorem(60) @sdn, @ipoptical, @zerodisclosure.
 
-#lorem(70)
+#lorem(70) @sla, @mcmc.
 
-#lorem(80)
+#lorem(80) @experiencedavailability.

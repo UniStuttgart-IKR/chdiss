@@ -42,18 +42,14 @@
 )
 
 === Metric Taxonomy
-The performance evaluation focuses on the following key metrics:
+The performance evaluation uses structured metric definitions demonstrated below:
 #list(
-  [*BL* <KPI_BL>: Baseline model. Calculates availability based on empirical @experiencedavailability, representing common industry practice.],
-  [*BY* <KPI_BY>: Bayesian model. Proposed hierarchical Bayesian models.],
-  [*RW* <KPI_RW>: Relative win metric ($"BY" - "BL"$).],
-  [*ID* <KPI_ID>: Internal domain. Refers to metrics evaluated exclusively within the internal, operator-controlled network.],
-  [*CD* <KPI_CD>: Cross domain. Refers to metrics evaluated on connections that traverse both the internal domain and the external domain.],
-  [*path-rmse* <KPI_PATH-RMSE>: Root-mean-square error of end-to-end path availability.],
-  [*path-std* <KPI_PATH-STD>: Standard deviation of path availability estimates.],
-  [*estimation-accuracy* <KPI_ESTIMATION-ACCURACY>: Proportion of accurate link classifications.],
-  [*underfulfillment* <KPI_UNDERFULFILLMENT>: Rate of service instances falling below target @sla.],
-  [*@sla violation* <KPI_SLA-VIOLATION>: Cumulative duration of availability underfulfillment.]
+  [*M1* <KPI_M1>: #lorem(12)],
+  [*M2* <KPI_M2>: #lorem(12)],
+  [*GROUP-A* <KPI_GROUP-A>: #lorem(12)],
+  [*GROUP-B* <KPI_GROUP-B>: #lorem(12)],
+  [*ACCURACY* <KPI_ACCURACY>: #lorem(12)],
+  [*ERROR* <KPI_ERROR>: #lorem(12)]
 )
 
 == Algorithmic Formulations and Numerical Results <sec_eval_results>
@@ -87,9 +83,9 @@ The performance evaluation focuses on the following key metrics:
   kind: "algorithm",
 ) <alg_hyperlinks>
 
-#lorem(25) @alg_hyperlinks. #lorem(20) #baselineref() #kpi("ID") and #kpi("CD").
-#lorem(20) #kpi("RW", "ID", "path-rmse") #lorem(15) #myqty(40, "%").
-#lorem(20) @fig_mass__MD_ikpi_estim-true.
+#lorem(25) @alg_hyperlinks. #lorem(20) #baselineref() #kpi("GROUP-A") and #kpi("GROUP-B").
+#lorem(20) #kpi("M1", "GROUP-A", "ERROR") #lorem(15) #myqty(40, "%").
+#lorem(20) @fig_eval_subfigures.
 
 #htmlplace(top+center, [
 #counter(figure.where(kind: "subfigure")).update(0)
@@ -109,27 +105,27 @@ The performance evaluation focuses on the following key metrics:
 
     [#figure(
       image("../../figures/allflatsimfigs/mass__SD_ikpi_estim-true.pdf"),
-      caption: [#kpi("RW", "ID", "estimation-accuracy")],
+      caption: [Performance in Scenario A.],
       kind: "subfigure",
       supplement: none,
       numbering: "a",
       outlined: false,
-    ) <fig_mass__MD_ikpi_estim-true_SD>],
+    ) <fig_eval_scenario_a>],
 
     [#figure(
       image("../../figures/allflatsimfigs/mass__MD_ikpi_estim-true.pdf"),
-      caption: [#kpi("RW", "CD", "estimation-accuracy")],
+      caption: [Performance in Scenario B.],
       kind: "subfigure",
       supplement: none,
       numbering: "a",
       outlined: false,
-    ) <fig_mass__MD_ikpi_estim-true_MD>],
+    ) <fig_eval_scenario_b>],
 
 
   ),
-  caption: [#kpi("RW", ("ID", "CD"), "estimation-accuracy").],
+  caption: [Comparative performance evaluation across simulation scenarios.],
   kind: image,
-) <fig_mass__MD_ikpi_estim-true>
+) <fig_eval_subfigures>
 ])
 
 

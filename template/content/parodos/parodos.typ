@@ -19,14 +19,14 @@
 )
 
 #figure(
-  image("../../figures/inkscape/contr_hyperlinks.pdf", width: 75%),
+  image("../../figures/inkscape/contr_hyperlinks.pdf", width: 100%),
   caption: [Overview of system architecture and network topology.],
 ) <fig_network_overview>
 
 == Research Objectives
 #lorem(50)
 
-#lorem(35) @ipoptical, @zerodisclosure, @sle, @sar, @mcmc. #lorem(20) #kpi("BL", "ID", "path-rmse").
+#lorem(35) @ipoptical, @zerodisclosure, @sle, @sar, @mcmc, @experiencedavailability. #lorem(20) #kpi("M1", "GROUP-A", "ACCURACY").
 
 The remainder of this thesis is organized as follows:
 @sec_groundrelatedwork provides theoretical background and literature review.

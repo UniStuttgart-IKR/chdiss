@@ -47,4 +47,4 @@
 
 #lorem(20) #wr(<eq_ibm_downtimeigam>) and #wr(<eq_ibm_uptimeigam>).
 #lorem(20) @sle, @sk, @ss.
-#lorem(25) #rkpi("path-rmse") or #kpi("BL", "ID", "path-rmse").
+#lorem(25) #rkpi("ACCURACY") or #kpi("M1", "GROUP-A", "ACCURACY").
