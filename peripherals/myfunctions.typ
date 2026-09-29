@@ -2,6 +2,10 @@
 #import "../3rdparty/typst-algorithmic/algorithmic.typ" as algorithmic
 #import algorithmic: algorithm, Comment, LineComment
 #import "@preview/i-figured:0.2.4"
+// =============================================================================
+// INTERNAL FUNCTIONS (Template engine, pagebreaks, outlines, Glossy themes)
+// These functions are used internally by the dissertation template engine.
+// =============================================================================
 
 #let myoddpagebreak() = {
   state("content.switch").update(false)
@@ -280,6 +284,11 @@
     )
   }
 )
+
+// =============================================================================
+// USER-FACING FUNCTIONS
+// These functions are exported via lib.typ for users to use in their thesis.
+// =============================================================================
 
 #let lorempages(pages) = {
   lorem(calc.floor(370 * pages))
@@ -607,16 +616,6 @@
 
 #let eqref(x) = wr(x, supplement: [Equation])
 
-// The arrow wrapper function
-#let arr = {
-  if CONSTS.HTMLMODE {
-    // In HTML mode, output a plain text arrow (uses Typst's text ligature)
-    [->] 
-  } else {
-    // In PDF mode, output the math-engine arrow
-    [$->$] 
-  }
-}
 
 #let extract-text(it) = {
   if type(it) == str {
@@ -711,16 +710,8 @@
   // align(right, text(weight: "bold", style: "italic", body))
   text(weight: "bold", body)
 )
-
-#let r(target) = link(label(target))[#target]
-
-// Helper function to link a single target to its kpi_<target> label
-
-#let roitc(target) = link(label("oitc_" + str(target)))[#target]
-
-// Variadic function that accepts any number of arguments and joins them
-// Helper function to link a single target to its kpi_<target> label
-#let rkpi(target) = link(label("KPI_" + upper(str(target))))[#target]
+// Internal helper function to link a single target to its KPI_<target> label
+#let _rkpi(target) = link(label("KPI_" + upper(str(target))))[#target]
 
 // Powerful variadic function that handles both strings and arrays
 #let kpi(..args) = {
@@ -728,10 +719,10 @@
   let process-item(item) = {
     if type(item) == array {
       // If it's an array: map the items, join with commas, and wrap in literal brackets \[ \]
-      [\[#item.map(rkpi).join([, ])\]]
+      [\[#item.map(_rkpi).join([, ])\]]
     } else {
       // If it's a single item: just apply the link function directly
-      rkpi(item)
+      _rkpi(item)
     }
   }
   
@@ -757,9 +748,5 @@
       place(positionarg, scope: "parent", float: true, clearance: clearance, body)
     }
   }
-}
-
-#let baselineref() = {
-  link(<sec_baselineintegration>)[baseline]
 }
 

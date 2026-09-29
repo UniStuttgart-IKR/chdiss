@@ -5,8 +5,10 @@
 == System Architecture and Workflow <sec_intentdrivenarchitecture>
 #lorem(50)
 
-#lorem(35) #roitc("starting") <oitc_starting> or #roitc("ending") <oitc_ending>.
+#lorem(35)
 @fig_contr_arch_statemachineexample illustrates four distinct phases of the state machine using the 2x2 subfigure template helper.
+
+#text(fill: navy)[*Functions `#subfigures(..cells, columns: 2, caption: [...])` and `#subfig(body, caption: [...])`:* Construct multi-column subfigure grids with automatic sub-lettering `(a)`, `(b)`, individual sub-captions, and an integrated main figure caption.]
 
 #FUNCS.subfigures(
   columns: (1fr, 1fr),
@@ -18,10 +20,14 @@
   [#FUNCS.subfig(image("../../figures/inkscape/contr_arch_statemachine4.pdf"), caption: [Phase 4: Final state]) <fig_statemachine4>],
 ) <fig_contr_arch_statemachineexample>
 
-#lorem(20) #r("fig_statemachine1") #lorem(15)
+#lorem(20) @fig_statemachine1 #lorem(15)
 
 == Mathematical Model Specification <sec_bayesianmodels>
 #lorem(45)
+
+#text(fill: navy)[*Function `#htmlplace(position, clearance: ..., body)`:* Provides safe placement and floating of figures or tables in PDF export (e.g., `top+center`, `bottom+center`, or `center`) while falling back cleanly to standard inline document flow in HTML mode.]
+
+#text(fill: navy)[*Function `#gridequations(main-label, ..cells)`:* Formats complex mathematical and hierarchical Bayesian models across 5 structured columns: Left-Hand Side (LHS), Relation, Right-Hand Side (RHS), Condition/Domain, and Sub-equation Label. Subequations automatically receive sub-lettered numbers (e.g., (3.1a), (3.1b)) and can be referenced individually.]
 
 #lorem(25) #wr(<eq_internal_bayesian_model>). #lorem(20)
 

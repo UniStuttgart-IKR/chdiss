@@ -21,6 +21,7 @@
   Terminate,
 )
 
+// User-facing functions offered to users
 #import FUNCS: (
   subfigures,
   subfig,
@@ -36,17 +37,10 @@
   pfont,
   wr,
   eqref,
-  arr,
-  extract-text,
   im,
-  plain-text,
   fheading,
-  r,
-  roitc,
-  rkpi,
   kpi,
   htmlplace,
-  baselineref,
   lorempages,
   todo,
 )

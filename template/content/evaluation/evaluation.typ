@@ -5,7 +5,7 @@
 == Simulation Settings and Performance Metrics <sec_simulationsettings>
 #lorem(45)
 
-#lorem(30) @tbl:tab_simulationparameters.
+#text(fill: navy)[*Function `#myqty(val, unit, space: 0.16667em, per: "/", math-mode: true)`:* Typesets numbers with scientific units adhering to typesetting conventions (proper non-breaking thin spaces in math mode), such as #myqty(1, "yr"), #myqty(48, "h"), or #myqty(150, "km").]
 
 #htmlplace(center, [
 #figure(
@@ -48,6 +48,8 @@ The performance evaluation uses structured metric definitions demonstrated below
 == Algorithmic Formulations and Numerical Results <sec_eval_results>
 #lorem(50)
 
+#text(fill: navy)[*Functions `#algo-block(...)`, `#CleanProcedure(...)`, `#FadedComment(...)`, and `#FadedLineComment(...)`:* An algorithm authoring suite built on top of `typst-algorithmic`. `#algo-block` creates a structured container with listed inputs and outputs; `#CleanProcedure` specifies the procedure signature cleanly; and `#FadedComment` / `#FadedLineComment` format subdued explanatory annotations.]
+
 #figure(
   FUNCS.algo-block(
     refer: "DiscoverHyperlinks",
@@ -76,7 +78,11 @@ The performance evaluation uses structured metric definitions demonstrated below
   kind: "algorithm",
 ) <alg_hyperlinks>
 
-#lorem(25) @alg_hyperlinks. #lorem(20) #baselineref() #rkpi("M1") and #rkpi("M2").
+#lorem(25) @alg_hyperlinks.
+
+#text(fill: navy)[*Function `#kpi(..args)`:* A variadic metric linking function. Each metric key links directly to its taxonomy definition anchor (`<KPI_...>`). Supplying multiple arguments joins them with optical em-dashes (`—`), while passing an array argument (e.g. `("M3", "M4")`) groups multiple variant metrics in brackets `[M3, M4]`.]
+
+#lorem(20) #kpi("M1") and #kpi("M2").
 #lorem(20) #kpi("M1", "M2", "M3") #lorem(15) #myqty(40, "%").
 #lorem(20) @fig_eval_subfigures.
 
@@ -121,6 +127,7 @@ The performance evaluation uses structured metric definitions demonstrated below
 ) <fig_eval_subfigures>
 ])
 
+#text(fill: navy)[*Function `#table-figure(caption: [...], columns: (...), header: (...), ..cells)`:* Generates formal publication tables with standardized horizontal rules (top rule, mid rule below header, bottom rule) and custom column alignments.]
 
 #FUNCS.table-figure(
   caption: [Performance comparison between baseline and proposed models using the `table-figure` helper function.],
@@ -133,5 +140,7 @@ The performance evaluation uses structured metric definitions demonstrated below
 ) <tab_benchmark_summary>
 
 #lorem(20) @tbl:tab_benchmark_summary.
+
+#text(fill: navy)[*Function `#lorempages(fraction)`:* Generates Latin placeholder text calibrated to approximately fill a specified fraction of a page (e.g., `#lorempages(0.25)`).]
 
 #FUNCS.lorempages(0.25)
