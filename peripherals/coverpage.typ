@@ -1,7 +1,7 @@
 #import "myconstants.typ" as CONSTS
 
 #let generatecoverpage(
-  title: [Doctoral Dissertation Title \ Subtitle or Secondary Title of the Work],
+  title: [Doctoral Dissertation Title Doctoral \ Dissertation Title Doctoral ],
   author: "John Doe",
   birthplace: "Sample City, Sample Country",
   first_examiner: "Prof. Dr.-Ing. Jane Smith",

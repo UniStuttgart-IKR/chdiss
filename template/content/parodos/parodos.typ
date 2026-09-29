@@ -26,7 +26,7 @@
 == Research Objectives
 #lorem(50)
 
-#lorem(35) @sle, @sar, @mcmc. #lorem(20) #kpi("BL", "ID", "path-rmse").
+#lorem(35) @ipoptical, @zerodisclosure, @sle, @sar, @mcmc. #lorem(20) #kpi("BL", "ID", "path-rmse").
 
 The remainder of this thesis is organized as follows:
 @sec_groundrelatedwork provides theoretical background and literature review.

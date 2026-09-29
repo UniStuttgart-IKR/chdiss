@@ -2,7 +2,7 @@
 
 #show: chdiss.with(
   // Document & Author Metadata
-  title: [Doctoral Dissertation Title \ Subtitle or Secondary Title of the Work],
+  title: [Doctoral Dissertation Title Doctoral \ Dissertation Title Doctoral Dissertation Title],
   author: "John Doe",
   birthplace: "Sample City, Sample Country",
   first_examiner: "Prof. Dr.-Ing. Jane Smith",
