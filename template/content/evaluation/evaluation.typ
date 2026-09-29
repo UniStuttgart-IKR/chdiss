@@ -7,9 +7,9 @@ We evaluate availability prediction accuracy, algorithm execution runtime, and o
 #lorem(45)
 
 We conduct extensive event-driven simulations under varied topological conditions.
-Key simulation settings are summarized in @tab_simulationparameters.
+Key simulation settings are summarized in @tbl:tab_simulationparameters.
 
-#htmlplace(top+center, [
+#htmlplace(center, [
 #figure(
   block[
     #set par(leading: 0.4em) 
