@@ -7,7 +7,7 @@
 
 #lorem(30) #link(<sec_baselineintegration>)[baseline integration] <sec_baselineintegration>.
 
-#text(fill: navy)[*Functions `#ffont(text)` and `#pfont(text)`:* Font styling helpers that apply the template's designated figure font (#ffont("CONSTS.FIGUREFONT"), Liberation Sans) and programming/code font (#pfont("CONSTS.PROGFONT"), Liberation Mono).]
+#text(fill: blue)[*Functions `#ffont(text)` and `#pfont(text)`:* Font styling helpers that apply the template's designated figure font (#ffont("CONSTS.FIGUREFONT"), Liberation Sans) and programming/code font (#pfont("CONSTS.PROGFONT"), Liberation Mono).]
 #lorem(20) #ffont("sans-serif figure font") and #pfont("TypewriterFont").
 
 == Theoretical Framework <sec_bayes>
@@ -17,9 +17,9 @@
 
 $ p(theta | y) = frac(p(y | theta) med p(theta), p(y)) $ <eq_bayesrule>
 
-#text(fill: navy)[*Function `#wr(target, fallback: "(1.2)", supplement: auto)`:* A "wrapped reference" helper designed for safe HTML compilation and export. In PDF export it produces normal clickable references with automatic supplements, while in HTML mode it provides robust fallback formatting without breaking references.]
+#text(fill: blue)[*Function `#wr(target, fallback: "(1.2)", supplement: auto)`:* A "wrapped reference" helper designed for safe HTML compilation and export. In PDF export it produces normal clickable references with automatic supplements, while in HTML mode it provides robust fallback formatting without breaking references.]
 
-#text(fill: navy)[*Function `#eqref(target)`:* A specialized equation reference wrapper that invokes `#wr(target, supplement: [Equation])`, formatting standardized citations like #eqref(<eq_bayesrule>).]
+#text(fill: blue)[*Function `#eqref(target)`:* A specialized equation reference wrapper that invokes `#wr(target, supplement: [Equation])`, formatting standardized citations like #eqref(<eq_bayesrule>).]
 
 #lorem(25) #wr(<eq_bayesrule>) (referenced via #eqref(<eq_bayesrule>)).
 @fig_bayes_inference depicts the workflow diagram.

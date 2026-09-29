@@ -8,17 +8,17 @@
 
 #lorem(35) #cite("vasseur-2004"). #lorem(25) #cite("doe-2022") and #cite("doe-2023").
 
-#text(fill: navy)[*Function `#todo(body)`:* Inserts a colored callout reminder in the text, useful for tracking pending draft items during thesis writing.]
+#text(fill: blue)[*Function `#todo(body)`:* Inserts a colored callout reminder in the text, useful for tracking pending draft items during thesis writing.]
 
 #FUNCS.todo([Optional: Add a brief overview of specific domain requirements here.])
 
-#text(fill: navy)[*Function `#fheading(body)`:* Formats an unnumbered, styled inline heading block with custom spacing to cleanly separate thematic sub-sections without creating clutter in the table of contents.]
+#text(fill: blue)[*Function `#fheading(body)`:* Formats an unnumbered, styled inline heading block with custom spacing to cleanly separate thematic sub-sections without creating clutter in the table of contents.]
 
 #FUNCS.fheading([Core Architectural Assumptions])
 
-#text(fill: navy)[*Function `#inline-terms(..items, style: "bold", delim: ":")`:* Formats a list of `([Term], [Definition])` tuples into a compact, bulleted inline list.]
+#text(fill: blue)[*Function `#inline-terms(..items, style: "bold", delim: ":")`:* Formats a list of `([Term], [Definition])` tuples into a compact, bulleted inline list.]
 
-#text(fill: navy)[*Function `#im(eq, alt: none)`:* Wraps inline math expressions (such as #im($theta$) or directional flows #im($-->$)) to ensure clean rendering across both PDF and HTML exports.]
+#text(fill: blue)[*Function `#im(eq, alt: none)`:* Wraps inline math expressions (such as #im($theta$) or directional flows #im($-->$)) to ensure clean rendering across both PDF and HTML exports.]
 
 #FUNCS.inline-terms(
   style: "bold",
