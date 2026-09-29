@@ -1,0 +1,14 @@
+[package]
+name = "chdiss"
+version = "0.1.0"
+entrypoint = "lib.typ"
+authors = ["Filippos Christou <filchristou@outlook.com>"]
+license = "MIT"
+description = "A comprehensive PhD dissertation template for engineering and computer science at Universität Stuttgart."
+keywords = ["thesis", "dissertation", "university-of-stuttgart", "bayesian"]
+compiler = "0.14.0"
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+thumbnail = "thumbnail.png"

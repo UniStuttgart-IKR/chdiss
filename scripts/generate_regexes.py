@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 import yaml
 import re
-from pathlib import Path
-
-yaml_file = '/home/pakis/IKR/ReportsAndPresentations/Diss/typstfiles/helperfiles/glossary.yaml'
-output_file = '/home/pakis/IKR/ReportsAndPresentations/Diss/scripts/regexesthatshouldntexis.txt'
+script_dir = Path(__file__).resolve().parent
+repo_dir = script_dir.parent
+yaml_file = (repo_dir / 'template' / 'helperfiles' / 'glossary.yaml') if (repo_dir / 'template' / 'helperfiles' / 'glossary.yaml').exists() else (repo_dir / 'helperfiles' / 'glossary.yaml')
+output_file = script_dir / 'regexesthatshouldntexis.txt'
 
 # --- HARDWIRED IGNORE LIST (ALLOWED IN TEXT) ---
 # Add any terms here (in lowercase) that you want the script to completely ignore.

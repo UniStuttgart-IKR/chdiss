@@ -1,7 +1,8 @@
 # Compiled Typst output
-diss_template_Ch/main.pdf
-diss_template_Ch/main.html
-diss_template_Ch/mainbw.pdf
+*.pdf
+!template/figures/**/*.pdf
+template/main.html
+template/mainbw.pdf
 report-releases/*.pdf
 !report-releases/.gitkeep
 

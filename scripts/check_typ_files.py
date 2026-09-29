@@ -5,7 +5,7 @@ from pathlib import Path
 
 script_dir = Path(__file__).resolve().parent
 repo_dir = script_dir.parent
-content_dir = repo_dir / 'diss_template_Ch' / 'content'
+content_dir = (repo_dir / 'template' / 'content') if (repo_dir / 'template' / 'content').exists() else (repo_dir / 'content')
 regex_file = script_dir / 'regexesthatshouldntexis.txt'
 
 def check_typ_files(custom_pattern=None):
