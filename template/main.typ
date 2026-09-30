@@ -35,7 +35,7 @@
 // =============================================================================
 
 = Introduction <sec_intro>
-#include("content/parodos/parodos.typ")
+#include("content/introduction/introduction.typ")
 
 = Background and Related Work <sec_groundrelatedwork>
 #include("content/background/background.typ")
@@ -46,5 +46,5 @@
 = Evaluation <sec_evaluation>
 #include("content/evaluation/evaluation.typ")
 
-= Conclusion <sec_exodos>
-#include("content/exodos/exodos.typ")
+= Conclusion <sec_conclusion>
+#include("content/conclusion/conclusion.typ")

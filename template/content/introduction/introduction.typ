@@ -43,5 +43,5 @@ The remainder of this thesis is organized as follows:
 @sec_groundrelatedwork provides theoretical background and literature review.
 @sec_contribution presents the proposed methodology and model formulations.
 @sec_evaluation details the empirical evaluation and performance comparisons.
-@sec_exodos concludes the thesis with discussion and outlook.
+@sec_conclusion concludes the thesis with discussion and outlook.
 Supplementary materials are compiled in @seca_all.
