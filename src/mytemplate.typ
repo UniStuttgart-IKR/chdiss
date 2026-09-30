@@ -7,21 +7,42 @@
 // #import "@preview/pergamon:0.7.1" as pergamon
 #import "../3rdparty/glossy/lib.typ" as glossy
 
+/// Main template show rule for the doctoral dissertation.
+///
+/// Applies Universität Stuttgart IKR dissertation styling, sets up frontmatter
+/// (cover page, abstract, kurzfassung, dedication, table of contents), configures
+/// headers/footers with odd/even page differentiation, registers glossary/acronyms,
+/// two-tier bibliography ("Author's Publications" vs general "References"), and appendix styling.
 #let chdiss(
+  /// Dissertation title (and optional subtitle).
   title: [Doctoral Dissertation Title \ Subtitle or Secondary Title of the Work],
+  /// Full author name.
   author: "John Doe",
+  /// Place of birth (e.g. "City, Country").
   birthplace: "Sample City, Sample Country",
+  /// Primary doctoral advisor / first examiner (Hauptberichter).
   first_examiner: "Prof. Dr.-Ing. Jane Smith",
+  /// Secondary doctoral advisor / second examiner (Mitberichter).
   second_examiner: "Prof. Dr.-Ing. Alex Johnson",
+  /// Faculty conferring the degree.
   faculty: "Fakultät für Informatik, Elektrotechnik und Informationstechnik",
+  /// University conferring the degree.
   university: "Universität Stuttgart",
+  /// Degree sought.
   degree: "Doktor-Ingenieurs (Dr.-Ing.)",
+  /// Institute / department name.
   institute: [Institut für Kommunikationsnetze und Rechnersysteme\ der Universität Stuttgart],
+  /// Official date of submission (Tag der Einreichung).
   submission_date: "1. Januar 2026",
+  /// Official date of oral examination / defense (Tag der mündlichen Prüfung). Defaults to placeholder dashes if `none`.
   defense_date: none,
+  /// Publication year shown on cover page.
   year: "2026",
+  /// Draft version string shown on cover page when `dev_mode` is true (defaults to "1.0").
   version: none,
+  /// BibTeX keyword used to identify author's own publications for the separate "Author's Publications" bibliography.
   own_bib_keyword: "own",
+  /// List of programming identifiers / terms to automatically format with `font_prog`.
   progterms: (
     "Turing.jl",
     "MINDFul.jl",
@@ -60,6 +81,7 @@
     "Weibull",
     "Hyperexponential",
   ),
+  /// List of algorithm names to automatically format in smallcaps and link to pseudocode blocks.
   algorithms: (
     "CrossDomainNodePrior",
     "HyperlinksPrior",
@@ -71,45 +93,78 @@
     "LightpathCompilation",
   ),
   // Typography and Font Configuration
+  /// Body text font family (defaults to CONSTS.TEXTFONT: "DejaVu Serif").
   font_text: auto,
+  /// Base text font size (defaults to CONSTS.TEXTFONTSIZE: 13pt).
   font_size: auto,
+  /// Programming/code terms font family (defaults to CONSTS.PROGFONT: "New Computer Modern").
   font_prog: auto,
+  /// Running page header font family (defaults to CONSTS.HEADERFONT: "Latin Modern Sans").
   font_header: auto,
+  /// Section/chapter headings font family (defaults to CONSTS.HEADINGSFONT: "Latin Modern Sans").
   font_headings: auto,
+  /// Figure/table captions font family (defaults to CONSTS.FIGUREFONT: "Latin Modern Sans").
   font_figure: auto,
+  /// Algorithm pseudocode font family (defaults to CONSTS.ALGORITHMFONT: "TeX Gyre Heros").
   font_algo: auto,
+  /// Large chapter number decorative font family (defaults to CONSTS.CHAPTERNUMBERFONT: ("Liberation Sans", "Roboto")).
   font_chapternumber: auto,
 
   // Sizing & Spacing Options
+  /// Running header font size (defaults to CONSTS.HEADERFONTSIZE: 13pt).
   header_font_size: auto,
+  /// Figure caption font size (defaults to CONSTS.FIGUREFONTSIZE: 13pt).
   figure_font_size: auto,
+  /// Algorithm font size (defaults to CONSTS.ALGORITHMSIZE: 12.0pt).
   algo_font_size: auto,
+  /// Title font size on cover page (defaults to CONSTS.TITLEFONTSIZE: 15pt).
   title_font_size: auto,
+  /// Author name font size on cover page (defaults to CONSTS.MYNAMEFONTSIZE: 14pt).
   myname_font_size: auto,
+  /// Background chapter number size (defaults to CONSTS.CHAPTERFONTSIZE: 150pt).
   chapter_font_size: auto,
+  /// Background chapter number color (defaults to CONSTS.CHAPTERFONTCOLOR: gray).
   chapter_font_color: auto,
 
+  /// Paragraph line leading (defaults to CONSTS.myleading: 0.975em).
   par_leading: auto,
+  /// Paragraph block spacing (defaults to CONSTS.myspacing: 1.2em).
   par_spacing: auto,
+  /// Spacing above and below figures (defaults to CONSTS.FIGUREVSPACE: 1.1em).
   figure_vspace: auto,
+  /// Floating figure clearance (defaults to CONSTS.FIGUREVCLEARANCE: 0.975em).
   figure_vclearance: auto,
+  /// Caption line leading (defaults to CONSTS.CAPTIONLEADING: 0.6em).
   caption_leading: auto,
+  /// Horizontal spacing between page number and title in headers (defaults to CONSTS.HEADERABSTAINFROMPAGE: 1cm).
   header_abstain_from_page: auto,
 
   // Appendix & Compilation Modes
+  /// Appendix numbering format string (defaults to CONSTS.APPENDIXNUMBERING: "A.1").
   appendix_numbering: auto,
+  /// Development/draft mode toggle (defaults to sys.inputs.dev == "TRUE"). Shows missing citations and draft version.
   dev_mode: auto,
+  /// Accent color for development mode annotations (defaults to CONSTS.DEVCOLOR: color.red).
   dev_color: auto,
+  /// Experimental HTML export mode toggle (defaults to sys.inputs.htmlmode == "TRUE").
   html_mode: auto,
 
   // Optional constants dictionary override
+  /// Dictionary of constant overrides mapping constant names (e.g. TEXTFONT, myleading) to values.
   constants: (:),
+  /// English abstract content.
   abstract: [],
+  /// Dedication page content.
   dedication: [],
+  /// German Kurzfassung content.
   kurzfassung: [],
+  /// Appendix content placed after bibliography.
   appendix: [],
+  /// Glossary/acronym data loaded from YAML or passed as a dictionary.
   glossary: none,
+  /// BibTeX bibliography content string loaded via `read(...)`.
   bib: none,
+  /// Document body content provided automatically by `#show: chdiss.with(...)`.
   doc,
 ) = {
 

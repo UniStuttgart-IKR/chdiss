@@ -63,13 +63,20 @@ my-dissertation/
 │   ├── abstract.typ
 │   ├── dedication.typ
 │   ├── kurzfassung.typ
-│   ├── 01_introduction.typ
-│   ├── 02_background.typ
-│   ├── 03_methodology.typ
-│   ├── 04_evaluation.typ
-│   ├── 05_conclusion.typ
-│   └── 06_appendix.typ
-├── figures/               # Images and diagrams
+│   ├── introduction/
+│   │   └── introduction.typ
+│   ├── background/
+│   │   └── background.typ
+│   ├── contribution/
+│   │   └── contribution.typ
+│   ├── evaluation/
+│   │   └── evaluation.typ
+│   ├── conclusion/
+│   │   └── conclusion.typ
+│   └── appendix/
+│       └── appendix.typ
+├── figures/               # Images, subfigures, and CeTZ diagrams
+│   └── cetzfigures.typ
 └── helperfiles/           # Metadata, bibliography, and glossaries
     ├── glossary.yaml      # Definitions for Acronyms, Glossary, Symbols
     ├── references.bib     # BibTeX references (tagged with keywords)
@@ -86,39 +93,135 @@ In `main.typ`:
 #import "@local/chdiss:0.1.0": *
 
 #show: chdiss.with(
-  title: [Your Dissertation Title],
-  author: "Author Name",
-  birthplace: "City, Country",
-  first_examiner: "Prof. Dr.-Ing. First Examiner",
-  second_examiner: "Prof. Dr.-Ing. Second Examiner",
-  faculty: "Faculty of Computer Science, Electrical Engineering and Information Technology",
+  title: [Doctoral Dissertation Title \ Subtitle or Secondary Title of the Work],
+  author: "John Doe",
+  birthplace: "Sample City, Sample Country",
+  first_examiner: "Prof. Dr.-Ing. Jane Smith",
+  second_examiner: "Prof. Dr.-Ing. Alex Johnson",
+  faculty: "Fakultät für Informatik, Elektrotechnik und Informationstechnik",
   university: "Universität Stuttgart",
-  institute: "Institute of Communication Networks and Computer Engineering (IKR)",
+  degree: "Doktor-Ingenieurs (Dr.-Ing.)",
+  institute: [Institut für Kommunikationsnetze und Rechnersysteme\ der Universität Stuttgart],
+  submission_date: "1. Januar 2026",
+  defense_date: none,
   year: "2026",
 
-  // Typography & Font Configuration (optional overrides; defaults shown)
-  // font_text: "DejaVu Serif",
-  // font_size: 13pt,
-  // font_prog: "New Computer Modern",
-  // font_header: "Latin Modern Sans",
-  // font_headings: "Latin Modern Sans",
-  // font_figure: "Latin Modern Sans",
-  // font_algo: "TeX Gyre Heros",
+  // Differentiate "Author's Publications" from general "References"
+  own_bib_keyword: "own",
 
-  abstract: include "content/abstract.typ",
-  kurzfassung: include "content/kurzfassung.typ",
-  dedication: include "content/dedication.typ",
+  // Resources
   glossary: yaml("helperfiles/glossary.yaml"),
   bib: read("helperfiles/references.bib"),
+
+  // Frontmatter & Backmatter
+  abstract: include("content/abstract.typ"),
+  dedication: include("content/dedication.typ"),
+  kurzfassung: include("content/kurzfassung.typ"),
+  appendix: include("content/appendix/appendix.typ"),
 )
 
-#include "content/01_introduction.typ"
-#include "content/02_background.typ"
-#include "content/03_methodology.typ"
-#include "content/04_evaluation.typ"
-#include "content/05_conclusion.typ"
-#include "content/06_appendix.typ"
+= Introduction <sec_intro>
+#include("content/introduction/introduction.typ")
+
+= Background and Related Work <sec_groundrelatedwork>
+#include("content/background/background.typ")
+
+= Methodology and Modeling <sec_contribution>
+#include("content/contribution/contribution.typ")
+
+= Evaluation <sec_evaluation>
+#include("content/evaluation/evaluation.typ")
+
+= Conclusion <sec_conclusion>
+#include("content/conclusion/conclusion.typ")
 ```
+
+---
+
+## Template Configuration Reference (`chdiss`)
+
+All arguments to `#show: chdiss.with(...)` are optional unless marked as required, and default to the standard IKR dissertation specifications.
+
+### 1. Cover Page & University Metadata
+
+| Argument | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `title` | `content` | `[Doctoral Dissertation Title ...]` | Full dissertation title and optional subtitle. |
+| `author` | `str` | `"John Doe"` | Full author name. |
+| `birthplace` | `str` | `"Sample City, Sample Country"` | Author's birthplace (e.g., city and country). |
+| `first_examiner` | `str` | `"Prof. Dr.-Ing. Jane Smith"` | Name and title of the primary supervisor (Hauptberichter). |
+| `second_examiner` | `str` | `"Prof. Dr.-Ing. Alex Johnson"` | Name and title of the secondary examiner (Mitberichter). |
+| `faculty` | `str` | `"Fakultät für Informatik, ..."` | Faculty conferring the doctoral degree. |
+| `university` | `str` | `"Universität Stuttgart"` | University name. |
+| `degree` | `str` | `"Doktor-Ingenieurs (Dr.-Ing.)"` | Academic degree sought. |
+| `institute` | `content` | `[Institut für Kommunikationsnetze ...]` | Institute / department name. |
+| `submission_date` | `str` | `"1. Januar 2026"` | Official submission date (Tag der Einreichung). |
+| `defense_date` | `str` / `none` | `none` | Examination/defense date (Tag der mündlichen Prüfung). Shows placeholder dashes if `none`. |
+| `year` | `str` | `"2026"` | Year printed on the title page. |
+| `version` | `str` / `none` | `none` | Draft version string displayed on the cover page when `dev_mode: true` (defaults to `"1.0"`). |
+
+### 2. Frontmatter, Backmatter & Document Body
+
+| Argument | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `abstract` | `content` | `[]` | English abstract content. |
+| `kurzfassung` | `content` | `[]` | German Kurzfassung content. |
+| `dedication` | `content` | `[]` | Optional dedication page content. |
+| `appendix` | `content` | `[]` | Appendix content placed after the bibliography. |
+| `doc` | `content` | *Required* | The document body content (supplied automatically by `#show: chdiss.with(...)`). |
+
+### 3. Bibliography, Glossaries & Automatic Formatting
+
+| Argument | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `bib` | `str` / `bytes` / `none` | `none` | BibTeX bibliography content string (loaded via `read("helperfiles/references.bib")`). |
+| `own_bib_keyword` | `str` | `"own"` | BibTeX keyword used to separate author publications from general literature into two distinct reference lists. |
+| `glossary` | `dict` / `str` / `none` | `none` | Glossary / acronym data (loaded via `yaml("helperfiles/glossary.yaml")` or passed as a dictionary). |
+| `progterms` | `array` of `str` | `(...)` | List of programming identifiers to automatically style using `font_prog`. |
+| `algorithms` | `array` of `str` | `(...)` | List of algorithm names to automatically format in smallcaps and link to their pseudocode blocks. |
+
+### 4. Typography & Font Configuration
+
+Every font family and size can be customized individually or via the `constants` dictionary:
+
+| Argument | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `font_text` | `str` / `array` | `"DejaVu Serif"` | Primary body text font family. |
+| `font_size` | `length` | `13pt` | Base body text font size. |
+| `font_prog` | `str` / `array` | `"New Computer Modern"` | Font family for code terms and programming keywords. |
+| `font_header` | `str` / `array` | `"Latin Modern Sans"` | Running page header and footer font family. |
+| `font_headings` | `str` / `array` | `"Latin Modern Sans"` | Heading font family (chapters, sections, subsections). |
+| `font_figure` | `str` / `array` | `"Latin Modern Sans"` | Figure/table caption font family. |
+| `font_algo` | `str` / `array` | `"TeX Gyre Heros"` | Font family for algorithm pseudocode blocks. |
+| `font_chapternumber` | `str` / `array` | `("Liberation Sans", "Roboto")` | Large decorative background chapter number font. |
+
+### 5. Sizing & Spacing Options
+
+| Argument | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `header_font_size` | `length` | `13pt` | Running page header font size. |
+| `figure_font_size` | `length` | `13pt` | Figure caption font size. |
+| `algo_font_size` | `length` | `12.0pt` | Algorithm pseudocode font size. |
+| `title_font_size` | `length` | `15pt` | Cover page title font size. |
+| `myname_font_size` | `length` | `14pt` | Cover page author name font size. |
+| `chapter_font_size` | `length` | `150pt` | Large decorative chapter number font size. |
+| `chapter_font_color` | `color` | `gray` | Color of the large decorative chapter number. |
+| `par_leading` | `length` | `0.975em` | Line spacing (`leading`) for body paragraphs. |
+| `par_spacing` | `length` | `1.2em` | Paragraph block spacing (`spacing`). |
+| `figure_vspace` | `length` | `1.1em` | Vertical spacing above and below figures. |
+| `figure_vclearance` | `length` | `0.975em` | Floating figure clearance. |
+| `caption_leading` | `length` | `0.6em` | Line spacing within figure captions. |
+| `header_abstain_from_page` | `length` | `1cm` | Horizontal spacing between page number and title in running headers. |
+
+### 6. Numbering, Diagnostics & Mode Flags
+
+| Argument | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `appendix_numbering` | `str` | `"A.1"` | Numbering format string for appendix figures, tables, and algorithms. |
+| `dev_mode` | `bool` | `sys.inputs.dev == "TRUE"` | Enables draft annotations, missing citation highlights, and length metadata. |
+| `dev_color` | `color` | `color.red` | Accent color for draft badges and missing citation warnings. |
+| `html_mode` | `bool` | `sys.inputs.htmlmode == "TRUE"` | Switches figure and algorithm links to HTML-compatible inline formats. |
+| `constants` | `dict` | `(:)` | Key-value dictionary override for any constant in `src/myconstants.typ` (case-insensitive keys, e.g. `constants: (TEXTFONT: "...", myleading: 1em)`). |
 
 ---
 
