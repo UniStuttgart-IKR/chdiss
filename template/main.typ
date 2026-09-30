@@ -19,7 +19,7 @@
   // Bibliography filter: differentiates "Author's Publications" from general "References"
   own_bib_keyword: "own",
 
-  // Typography & Font Configuration (optional overrides; defaults shown)
+  // Typography & Layout Configuration (optional overrides; defaults shown)
   // font_text: "DejaVu Serif",
   // font_size: 13pt,
   // font_prog: "New Computer Modern",
@@ -27,6 +27,20 @@
   // font_headings: "Latin Modern Sans",
   // font_figure: "Latin Modern Sans",
   // font_algo: "TeX Gyre Heros",
+  // font_chapternumber: ("Liberation Sans", "Roboto"),
+  // par_leading: 0.975em,
+  // par_spacing: 1.2em,
+  // figure_vspace: 1.1em,
+  // figure_vclearance: 0.975em,
+  // caption_leading: 0.6em,
+  // header_font_size: 13pt,
+  // figure_font_size: 13pt,
+  // algo_font_size: 12.0pt,
+  // chapter_font_size: 150pt,
+  // chapter_font_color: gray,
+  // header_abstain_from_page: 1cm,
+  // appendix_numbering: "A.1",
+  // constants: (:), // Or pass dictionary of CONSTS overrides: (TEXTFONT: "...", myleading: ...)
 
   // Bibliography & Glossary resources
   glossary: yaml("helperfiles/glossary.yaml"),

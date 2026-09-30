@@ -14,17 +14,21 @@
   defense_date: none,
   year: "2026",
   version: none,
+  dev: CONSTS.DEV,
+  dev_color: CONSTS.DEVCOLOR,
+  title_font_size: CONSTS.TITLEFONTSIZE,
+  myname_font_size: CONSTS.MYNAMEFONTSIZE,
 ) = {
 
 align(center)[
-  #if CONSTS.DEV [
+  #if dev [
      #place(top + center, float: false, [
       #let ver = if version != none { version } else { CONSTS.DETAILS.at("version", default: "1.0") }
-      #text(fill: CONSTS.DEVCOLOR, [draft version #ver])
+      #text(fill: dev_color, [draft version #ver])
     ])
   ]
   #v(1fr)
-  #text(size: CONSTS.TITLEFONTSIZE, weight: "bold", title)
+  #text(size: title_font_size, weight: "bold", title)
   #v(1fr)
   Von der #faculty\
   der #university zur Erlangung der Würde\
@@ -32,7 +36,7 @@ align(center)[
   #v(1fr)
   Vorgelegt von
   #v(0.4fr)
-  #text(size: CONSTS.TITLEFONTSIZE, author)
+  #text(size: myname_font_size, author)
   #v(0.2fr)
   #if birthplace != none [geboren in #birthplace]
   #v(1fr)

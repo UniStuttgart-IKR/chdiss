@@ -71,13 +71,39 @@
     "LightpathCompilation",
   ),
   // Typography and Font Configuration
-  font_text: CONSTS.TEXTFONT,
-  font_size: CONSTS.TEXTFONTSIZE,
-  font_prog: CONSTS.PROGFONT,
-  font_header: CONSTS.HEADERFONT,
-  font_headings: CONSTS.HEADINGSFONT,
-  font_figure: CONSTS.FIGUREFONT,
-  font_algo: CONSTS.ALGORITHMFONT,
+  font_text: auto,
+  font_size: auto,
+  font_prog: auto,
+  font_header: auto,
+  font_headings: auto,
+  font_figure: auto,
+  font_algo: auto,
+  font_chapternumber: auto,
+
+  // Sizing & Spacing Options
+  header_font_size: auto,
+  figure_font_size: auto,
+  algo_font_size: auto,
+  title_font_size: auto,
+  myname_font_size: auto,
+  chapter_font_size: auto,
+  chapter_font_color: auto,
+
+  par_leading: auto,
+  par_spacing: auto,
+  figure_vspace: auto,
+  figure_vclearance: auto,
+  caption_leading: auto,
+  header_abstain_from_page: auto,
+
+  // Appendix & Compilation Modes
+  appendix_numbering: auto,
+  dev_mode: auto,
+  dev_color: auto,
+  html_mode: auto,
+
+  // Optional constants dictionary override
+  constants: (:),
   abstract: [],
   dedication: [],
   kurzfassung: [],
@@ -86,6 +112,43 @@
   bib: none,
   doc,
 ) = {
+
+  // Resolve constants: user explicit parameter -> constants dictionary -> CONSTS default
+  let c(key, param, fallback) = {
+    if param != auto { param }
+    else if key in constants { constants.at(key) }
+    else if lower(key) in constants { constants.at(lower(key)) }
+    else { fallback }
+  }
+
+  let font_text = c("TEXTFONT", font_text, CONSTS.TEXTFONT)
+  let font_size = c("TEXTFONTSIZE", font_size, CONSTS.TEXTFONTSIZE)
+  let font_prog = c("PROGFONT", font_prog, CONSTS.PROGFONT)
+  let font_header = c("HEADERFONT", font_header, CONSTS.HEADERFONT)
+  let font_headings = c("HEADINGSFONT", font_headings, CONSTS.HEADINGSFONT)
+  let font_figure = c("FIGUREFONT", font_figure, CONSTS.FIGUREFONT)
+  let font_algo = c("ALGORITHMFONT", font_algo, CONSTS.ALGORITHMFONT)
+  let font_chapternumber = c("CHAPTERNUMBERFONT", font_chapternumber, CONSTS.CHAPTERNUMBERFONT)
+
+  let header_font_size = c("HEADERFONTSIZE", header_font_size, CONSTS.HEADERFONTSIZE)
+  let figure_font_size = c("FIGUREFONTSIZE", figure_font_size, CONSTS.FIGUREFONTSIZE)
+  let algo_font_size = c("ALGORITHMSIZE", algo_font_size, CONSTS.ALGORITHMSIZE)
+  let title_font_size = c("TITLEFONTSIZE", title_font_size, CONSTS.TITLEFONTSIZE)
+  let myname_font_size = c("MYNAMEFONTSIZE", myname_font_size, CONSTS.MYNAMEFONTSIZE)
+  let chapter_font_size = c("CHAPTERFONTSIZE", chapter_font_size, CONSTS.CHAPTERFONTSIZE)
+  let chapter_font_color = c("CHAPTERFONTCOLOR", chapter_font_color, CONSTS.CHAPTERFONTCOLOR)
+
+  let par_leading = c("myleading", par_leading, CONSTS.myleading)
+  let par_spacing = c("myspacing", par_spacing, CONSTS.myspacing)
+  let figure_vspace = c("FIGUREVSPACE", figure_vspace, CONSTS.FIGUREVSPACE)
+  let figure_vclearance = c("FIGUREVCLEARANCE", figure_vclearance, CONSTS.FIGUREVCLEARANCE)
+  let caption_leading = c("CAPTIONLEADING", caption_leading, CONSTS.CAPTIONLEADING)
+  let header_abstain_from_page = c("HEADERABSTAINFROMPAGE", header_abstain_from_page, CONSTS.HEADERABSTAINFROMPAGE)
+
+  let appendix_numbering = c("APPENDIXNUMBERING", appendix_numbering, CONSTS.APPENDIXNUMBERING)
+  let dev_mode = c("DEV", dev_mode, CONSTS.DEV)
+  let dev_color = c("DEVCOLOR", dev_color, CONSTS.DEVCOLOR)
+  let html_mode = c("HTMLMODE", html_mode, CONSTS.HTMLMODE)
 
 set document(
   title: title,
@@ -111,7 +174,7 @@ set text(
     header: context {
     let returntext(direction, content) = {
       return align(direction)[
-        #text(font: font_header, size: CONSTS.HEADERFONTSIZE, content)
+        #text(font: font_header, size: header_font_size, content)
       ]
     }
     let chapters = query(
@@ -134,9 +197,9 @@ set text(
     // let chapternumbering = counter(heading).get().at(0)
     let chapternumbering = numbering(FUNCS.defaultnumbering(lastheading1),  counter(heading).get().at(0))
     if chapternumbering == "0" {
-    return returntext(left, [#counter(page).display("1") #h(CONSTS.HEADERABSTAINFROMPAGE) #chaptername])
+    return returntext(left, [#counter(page).display("1") #h(header_abstain_from_page) #chaptername])
   } else {
-    return returntext(left, [#counter(page).display("1") #h(CONSTS.HEADERABSTAINFROMPAGE) Chapter #chapternumbering #sym.dash #chaptername])
+    return returntext(left, [#counter(page).display("1") #h(header_abstain_from_page) Chapter #chapternumbering #sym.dash #chaptername])
   }
   } else {
     let afterheadings = query(selector(heading).after(here()))
@@ -163,9 +226,9 @@ set text(
     if headingtouse.level == 1 {
     return returntext(right, [#counter(page).display("1")])
   } else if headingnumbertouse == "0" {
-    return returntext(right, [#headingname #h(CONSTS.HEADERABSTAINFROMPAGE) #counter(page).display("1")])
+    return returntext(right, [#headingname #h(header_abstain_from_page) #counter(page).display("1")])
   } else {
-    return returntext(right, [#headingnumbertouse #headingname #h(CONSTS.HEADERABSTAINFROMPAGE) #counter(page).display("1")])
+    return returntext(right, [#headingnumbertouse #headingname #h(header_abstain_from_page) #counter(page).display("1")])
   }
   }
   }
@@ -176,10 +239,8 @@ set text(
 
 set par(
   first-line-indent: 1em,
-  // leading: CONSTS.myleading,
-  // leading: 0.65em * 2,
-  leading: CONSTS.myleading,
-  spacing: CONSTS.myspacing,
+  leading: par_leading,
+  spacing: par_spacing,
   justify: true,
 )
 
@@ -188,13 +249,12 @@ set heading(
   supplement: [Section]
 )
 
-// set figure(gap: CONSTS.FIGURELEADING)
-show figure: set block(above: CONSTS.FIGUREVSPACE, below: CONSTS.FIGUREVSPACE)
-show figure: set place(clearance: CONSTS.FIGUREVCLEARANCE)
+show figure: set block(above: figure_vspace, below: figure_vspace)
+show figure: set place(clearance: figure_vclearance)
 
 show figure.caption: c => {
-  set par(leading: CONSTS.CAPTIONLEADING)
-  text(font: font_figure, size: CONSTS.FIGUREFONTSIZE, c)
+  set par(leading: caption_leading)
+  text(font: font_figure, size: figure_font_size, c)
 }
 
 // show figure: i-figured.show-figure
@@ -203,7 +263,7 @@ show figure.where(kind: table): i-figured.show-figure
 show figure.where(kind: raw): i-figured.show-figure
 show figure.where(kind: "algorithm"): i-figured.show-figure.with(extra-prefixes: (algorithm: "algo:"))
 show figure.where(kind: "algorithm"): set figure(supplement: "Algorithm")
-show figure.where(kind: "algorithm"): set text(font: font_algo, size: CONSTS.ALGORITHMSIZE)
+show figure.where(kind: "algorithm"): set text(font: font_algo, size: algo_font_size)
 set math.equation(numbering: "(1.1)")
 show math.equation: i-figured.show-equation
 
@@ -213,7 +273,7 @@ show figure.where(kind: "subfigure"): it => {
     v(0.5em, weak: true)
     if it.caption != none {
       let num = numbering(it.numbering, it.counter.at(it.location()).first())
-      text(font: font_figure, size: CONSTS.FIGUREFONTSIZE)[#strong[(#num)] #it.caption.body]
+      text(font: font_figure, size: figure_font_size)[#strong[(#num)] #it.caption.body]
     }
   }))
 }
@@ -270,7 +330,7 @@ show heading: it => {
     let beforeselectorcounterdisplay = numbering(FUNCS.defaultnumbering(it), ..counter(heading).get())
 
     if not(beforeselectorcounterdisplay == "0" or it.body == [Author's Publications] or it.body == [References]) {
-      text(beforeselectorcounterdisplay, fill: CONSTS.CHAPTERFONTCOLOR, size: CONSTS.CHAPTERFONTSIZE, font: CONSTS.CHAPTERNUMBERFONT)
+      text(beforeselectorcounterdisplay, fill: chapter_font_color, size: chapter_font_size, font: font_chapternumber)
     }
     reset + counter(figure.where(kind: image)).update(0) + counter(figure.where(kind: table)).update(0) + [
     #linebreak()#linebreak()
@@ -309,7 +369,7 @@ if algorithms != none and algorithms.len() > 0 {
   let algo-regex = regex("\b(" + algorithms.join("|") + ")\b")
   show algo-regex: it => {
     let styled-text = text(font: font_algo)[#smallcaps(it.text)]
-    if CONSTS.HTMLMODE {
+    if html_mode {
       styled-text
     } else {
       link(label("refer_alg_" + it.text))[#styled-text]
@@ -335,9 +395,9 @@ show: doc => if glossary != none {
 
 
 show regex("\\?[^\\?\\s]+\\?"): it => {
-  if CONSTS.DEV {
+  if dev_mode {
     [#metadata(it.text) <missing-cite>]
-    text(fill: red, weight: "bold")[#it]
+    text(fill: dev_color, weight: "bold")[#it]
   } else {
     it
   }
@@ -357,6 +417,10 @@ generatecoverpage(
   defense_date: defense_date,
   year: year,
   version: version,
+  dev: dev_mode,
+  dev_color: dev_color,
+  title_font_size: title_font_size,
+  myname_font_size: myname_font_size,
 )
 
 FUNCS.myoddpagebreak()
@@ -516,7 +580,7 @@ context {
     }
   }
   
-  if CONSTS.DEV {
+  if dev_mode {
     [#metadata(toc-data) <chapter-lengths>]
   }
 }
@@ -565,24 +629,24 @@ pergamon.print-bibliography(
 counter(heading).update(0)
 
 // ORIGINAL RULE (revert by uncommenting this and removing the selective rules below):
-// show figure: i-figured.show-figure.with(numbering: CONSTS.APPENDIXNUMBERING)
-show figure.where(kind: image): i-figured.show-figure.with(numbering: CONSTS.APPENDIXNUMBERING)
-show figure.where(kind: table): i-figured.show-figure.with(numbering: CONSTS.APPENDIXNUMBERING)
-show figure.where(kind: raw): i-figured.show-figure.with(numbering: CONSTS.APPENDIXNUMBERING)
-show math.equation: i-figured.show-equation.with(numbering: CONSTS.APPENDIXNUMBERING)
-show figure.where(kind: "algorithm"): i-figured.show-figure.with(numbering: CONSTS.APPENDIXNUMBERING, extra-prefixes: (algorithm: "algo:"))
+// show figure: i-figured.show-figure.with(numbering: appendix_numbering)
+show figure.where(kind: image): i-figured.show-figure.with(numbering: appendix_numbering)
+show figure.where(kind: table): i-figured.show-figure.with(numbering: appendix_numbering)
+show figure.where(kind: raw): i-figured.show-figure.with(numbering: appendix_numbering)
+show math.equation: i-figured.show-equation.with(numbering: appendix_numbering)
+show figure.where(kind: "algorithm"): i-figured.show-figure.with(numbering: appendix_numbering, extra-prefixes: (algorithm: "algo:"))
 
 FUNCS.myoddpagebreak()
 // set heading(
 //   numbering: "A.1"
 // )
 set heading(supplement: [Appendix])
-[#heading([Appendix], numbering: CONSTS.APPENDIXNUMBERING, outlined: true) <seca_all>]
+[#heading([Appendix], numbering: appendix_numbering, outlined: true) <seca_all>]
 appendix
 
 FUNCS.myoddpagebreak()
 
-if CONSTS.DEV {
+if dev_mode {
   [#metadata("end") <end-of-doc>]
 }
 }
