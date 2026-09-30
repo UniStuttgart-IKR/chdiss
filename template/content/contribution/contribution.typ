@@ -29,7 +29,7 @@
 
 #text(fill: blue)[*Function `#gridequations(main-label, ..cells)`:* Formats complex mathematical and hierarchical Bayesian models across 5 structured columns: Left-Hand Side (LHS), Relation, Right-Hand Side (RHS), Condition/Domain, and Sub-equation Label. Subequations automatically receive sub-lettered numbers (e.g., (3.1a), (3.1b)) and can be referenced individually.]
 
-#lorem(25) #wr(<eq_internal_bayesian_model>). #lorem(20)
+#lorem(25) #wr(<eq_internal_bayesian_model>). @sfe, @sr #lorem(20)
 
 #htmlplace(bottom+center, [
 #FUNCS.gridequations(

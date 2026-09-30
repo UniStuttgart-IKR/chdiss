@@ -370,6 +370,23 @@ show ref: it => {
     } else {
       it
     }
+  } else if it.element != none {
+    let t = str(it.target)
+    if not (t.starts-with("fig:") or t.starts-with("tbl:") or t.starts-with("eqt:") or t.starts-with("algo:") or t.starts-with("lst:")) {
+      if it.element.func() == figure {
+        let p = if it.element.kind == image { "fig:" }
+          else if it.element.kind == table { "tbl:" }
+          else if it.element.kind == "algorithm" { "algo:" }
+          else if it.element.kind == raw { "lst:" }
+          else { none }
+        if p != none {
+          return ref(label(p + t), supplement: it.supplement)
+        }
+      } else if it.element.func() == math.equation {
+        return ref(label("eqt:" + t), supplement: it.supplement)
+      }
+    }
+    it
   } else {
     it
   }
@@ -688,7 +705,8 @@ counter(heading).update(0)
 show figure.where(kind: image): i-figured.show-figure.with(numbering: appendix_numbering)
 show figure.where(kind: table): i-figured.show-figure.with(numbering: appendix_numbering)
 show figure.where(kind: raw): i-figured.show-figure.with(numbering: appendix_numbering)
-show math.equation: i-figured.show-equation.with(numbering: appendix_numbering)
+let app_eq_numbering = if appendix_numbering.starts-with("(") { appendix_numbering } else { "(" + appendix_numbering + ")" }
+show math.equation: i-figured.show-equation.with(numbering: app_eq_numbering)
 show figure.where(kind: "algorithm"): i-figured.show-figure.with(numbering: appendix_numbering, extra-prefixes: (algorithm: "algo:"))
 
 FUNCS.myoddpagebreak()

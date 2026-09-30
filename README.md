@@ -2,6 +2,8 @@
 
 A comprehensive PhD dissertation template for engineering and computer science, styled according to the requirements of the Universität Stuttgart (IKR).
 
+Build with love. Refactored as a template with AI.
+
 ## Features
 
 - **Document Configuration (`chdiss`)**:
@@ -15,8 +17,6 @@ A comprehensive PhD dissertation template for engineering and computer science, 
   - Three distinct reference tables: Acronyms, Glossary, and Mathematical Symbols.
 - **Algorithms Support (`clean-algorithmic`)**:
   - Pre-exported algorithm styling primitives: `CleanProcedure`, `Assign`, `For`, `If`, `Else`, `Return`, etc.
-- **Vector Graphics & CeTZ Integration**:
-  - Re-exported CeTZ canvas wrappers for network diagrams and mathematical illustrations.
 - **Subfigures & Multi-Column Layouts**:
   - Pre-configured single-column, multi-column, and multi-row subfigures with proper `i-figured` numbering and list of figures inclusion.
 
