@@ -1,8 +1,8 @@
 # `chdiss`: Typst PhD Dissertation Template
 
-A comprehensive PhD dissertation template for engineering and computer science, styled according to the requirements of the Universität Stuttgart (IKR).
+A comprehensive PhD dissertation template for engineering and computer science, styled according to the requirements of the Universität Stuttgart.
 
-Build with love. Refactored as a template with AI.
+Built with love. Refactored as a template with AI.
 
 ## Features
 
