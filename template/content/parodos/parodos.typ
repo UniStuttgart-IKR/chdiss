@@ -6,7 +6,9 @@
 == Motivation and Problem Statement
 #lorem(70)
 
-#lorem(35) #cite("vasseur-2004"). #lorem(25) #cite("doe-2022") and #cite("doe-2023").
+#text(fill: blue)[*Function `#cite(key)`:* Cites bibliographic references managed by `pergamon`. References tagged with the `own` keyword populate *Author's Publications*, while other citations populate the main *References* section.]
+
+#lorem(35) #cite("vasseur-2004"), #cite("saltzer-1984"), and #cite("kurose-2021"). #lorem(25) #cite("doe-2022"), #cite("doe-2023"), and #cite("doe-2024").
 
 #text(fill: blue)[*Function `#todo(body)`:* Inserts a colored callout reminder in the text, useful for tracking pending draft items during thesis writing.]
 

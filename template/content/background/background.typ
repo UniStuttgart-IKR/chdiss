@@ -3,7 +3,7 @@
 #lorem(45)
 
 == Foundations and Related Work <sec_ipoptical>
-#lorem(60)
+#lorem(30) #cite("shannon-1948") #lorem(25) #cite("smith-2021").
 
 #lorem(30) #link(<sec_baselineintegration>)[baseline integration] <sec_baselineintegration>.
 
@@ -11,7 +11,7 @@
 #lorem(20) #ffont("sans-serif figure font") and #pfont("TypewriterFont").
 
 == Theoretical Framework <sec_bayes>
-#lorem(50)
+#lorem(30) #cite("gelman-2013") #lorem(20) #cite("bishop-2006").
 
 #lorem(30) #im($theta$), #im($p(theta)$), #im($y$):
 

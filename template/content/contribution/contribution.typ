@@ -3,7 +3,7 @@
 #lorem(45)
 
 == System Architecture and Workflow <sec_intentdrivenarchitecture>
-#lorem(50)
+#lorem(30) #cite("mckeown-2008") #lorem(20).
 
 #lorem(35)
 @fig_contr_arch_statemachineexample illustrates four distinct phases of the state machine using the 2x2 subfigure template helper.

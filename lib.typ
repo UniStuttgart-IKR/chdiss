@@ -44,3 +44,6 @@
   lorempages,
   todo,
 )
+
+// Citation helpers from pergamon
+#import "@preview/pergamon:0.8.0": cite, citet, citep
