@@ -70,6 +70,14 @@
     "PrioritizePaths",
     "LightpathCompilation",
   ),
+  // Typography and Font Configuration
+  font_text: CONSTS.TEXTFONT,
+  font_size: CONSTS.TEXTFONTSIZE,
+  font_prog: CONSTS.PROGFONT,
+  font_header: CONSTS.HEADERFONT,
+  font_headings: CONSTS.HEADINGSFONT,
+  font_figure: CONSTS.FIGUREFONT,
+  font_algo: CONSTS.ALGORITHMFONT,
   abstract: [],
   dedication: [],
   kurzfassung: [],
@@ -86,8 +94,8 @@ set document(
 )
 
 set text(
-  font: CONSTS.TEXTFONT,
-  size: CONSTS.TEXTFONTSIZE,
+  font: font_text,
+  size: font_size,
   spacing: 100%,        // tighter word spacing
   // tracking: -0.00pt,   // subtle letter tightening
   // hyphenate: true,     // breaks words to fill lines better
@@ -103,7 +111,7 @@ set text(
     header: context {
     let returntext(direction, content) = {
       return align(direction)[
-        #text(font: CONSTS.HEADERFONT, size: CONSTS.HEADERFONTSIZE, content)
+        #text(font: font_header, size: CONSTS.HEADERFONTSIZE, content)
       ]
     }
     let chapters = query(
@@ -186,7 +194,7 @@ show figure: set place(clearance: CONSTS.FIGUREVCLEARANCE)
 
 show figure.caption: c => {
   set par(leading: CONSTS.CAPTIONLEADING)
-  text(font: CONSTS.FIGUREFONT, size: CONSTS.FIGUREFONTSIZE, c)
+  text(font: font_figure, size: CONSTS.FIGUREFONTSIZE, c)
 }
 
 // show figure: i-figured.show-figure
@@ -195,7 +203,7 @@ show figure.where(kind: table): i-figured.show-figure
 show figure.where(kind: raw): i-figured.show-figure
 show figure.where(kind: "algorithm"): i-figured.show-figure.with(extra-prefixes: (algorithm: "algo:"))
 show figure.where(kind: "algorithm"): set figure(supplement: "Algorithm")
-show figure.where(kind: "algorithm"): set text(font: CONSTS.ALGORITHMFONT, size: CONSTS.ALGORITHMSIZE)
+show figure.where(kind: "algorithm"): set text(font: font_algo, size: CONSTS.ALGORITHMSIZE)
 set math.equation(numbering: "(1.1)")
 show math.equation: i-figured.show-equation
 
@@ -205,7 +213,7 @@ show figure.where(kind: "subfigure"): it => {
     v(0.5em, weak: true)
     if it.caption != none {
       let num = numbering(it.numbering, it.counter.at(it.location()).first())
-      text(font: CONSTS.FIGUREFONT, size: CONSTS.FIGUREFONTSIZE)[#strong[(#num)] #it.caption.body]
+      text(font: font_figure, size: CONSTS.FIGUREFONTSIZE)[#strong[(#num)] #it.caption.body]
     }
   }))
 }
@@ -266,11 +274,11 @@ show heading: it => {
     }
     reset + counter(figure.where(kind: image)).update(0) + counter(figure.where(kind: table)).update(0) + [
     #linebreak()#linebreak()
-    #text(it.body, font: CONSTS.HEADINGSFONT, size: 1.5em)
+    #text(it.body, font: font_headings, size: 1.5em)
     #linebreak()#linebreak()
     ]
   } else {
-    reset + text(it, font: CONSTS.HEADINGSFONT)
+    reset + text(it, font: font_headings)
     // it
   }
 }
@@ -294,13 +302,13 @@ show outline.entry.where(
 
 if progterms != none and progterms.len() > 0 {
   let progterms-regex = regex("\b(" + progterms.join("|") + ")\b")
-  show progterms-regex: it => text(font: CONSTS.PROGFONT)[#it.text]
+  show progterms-regex: it => text(font: font_prog)[#it.text]
 }
 
 if algorithms != none and algorithms.len() > 0 {
   let algo-regex = regex("\b(" + algorithms.join("|") + ")\b")
   show algo-regex: it => {
-    let styled-text = text(font: CONSTS.ALGORITHMFONT)[#smallcaps(it.text)]
+    let styled-text = text(font: font_algo)[#smallcaps(it.text)]
     if CONSTS.HTMLMODE {
       styled-text
     } else {

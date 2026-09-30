@@ -1,8 +1,7 @@
-#import "peripherals/mytemplate.typ": chdiss
-#import "peripherals/myfunctions.typ" as FUNCS
-#import "peripherals/myconstants.typ" as CONSTS
-#import "peripherals/cetzfigures.typ" as CETZFIGS
-#import "peripherals/coverpage.typ": generatecoverpage
+#import "src/mytemplate.typ": chdiss
+#import "src/myfunctions.typ" as FUNCS
+#import "src/myconstants.typ" as CONSTS
+#import "src/coverpage.typ": generatecoverpage
 #import "3rdparty/typst-algorithmic/algorithmic.typ" as algorithmic
 #import "3rdparty/typst-algorithmic/algorithmic.typ": (
   Assign,

@@ -19,6 +19,15 @@
   // Bibliography filter: differentiates "Author's Publications" from general "References"
   own_bib_keyword: "own",
 
+  // Typography & Font Configuration (optional overrides; defaults shown)
+  // font_text: "DejaVu Serif",
+  // font_size: 13pt,
+  // font_prog: "New Computer Modern",
+  // font_header: "Latin Modern Sans",
+  // font_headings: "Latin Modern Sans",
+  // font_figure: "Latin Modern Sans",
+  // font_algo: "TeX Gyre Heros",
+
   // Bibliography & Glossary resources
   glossary: yaml("helperfiles/glossary.yaml"),
   bib: read("helperfiles/references.bib"),

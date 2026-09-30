@@ -13,7 +13,7 @@
 
 #let CONTENTDIR = "/content/"
 #let HELPERFILESDIR = "/helperfiles/"
-#let PERIPHERALSDIR = "/peripherals/"
+#let SRCDIR = "/src/"
 #let FIGURESDIV = "/figures/"
 
 #let DETAILS = (version: "1.0")

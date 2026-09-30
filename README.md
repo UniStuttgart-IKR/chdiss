@@ -95,6 +95,16 @@ In `main.typ`:
   university: "Universität Stuttgart",
   institute: "Institute of Communication Networks and Computer Engineering (IKR)",
   year: "2026",
+
+  // Typography & Font Configuration (optional overrides; defaults shown)
+  // font_text: "DejaVu Serif",
+  // font_size: 13pt,
+  // font_prog: "New Computer Modern",
+  // font_header: "Latin Modern Sans",
+  // font_headings: "Latin Modern Sans",
+  // font_figure: "Latin Modern Sans",
+  // font_algo: "TeX Gyre Heros",
+
   abstract: include "content/abstract.typ",
   kurzfassung: include "content/kurzfassung.typ",
   dedication: include "content/dedication.typ",

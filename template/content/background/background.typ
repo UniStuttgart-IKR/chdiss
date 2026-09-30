@@ -1,4 +1,5 @@
 #import "@local/chdiss:0.1.0": *
+#import "../../figures/cetzfigures.typ" as CETZFIGS
 
 #lorem(45)
 
