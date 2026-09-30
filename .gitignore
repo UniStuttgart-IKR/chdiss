@@ -9,7 +9,8 @@ report-releases/*.pdf
 # Python cache & logs
 __pycache__/
 *.py[cod]
-scripts/*report.txt
+*report.txt
+template/scripts/*report.txt
 
 # OS & Editor
 .DS_Store

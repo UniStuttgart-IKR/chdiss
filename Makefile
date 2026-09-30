@@ -77,10 +77,20 @@ queryrefs:
 querychaplen:
 	@$(MAKE) -C template querychaplen
 
-.PHONY: check-typ-files
-## run Python glossary term checking script
-check-typ-files:
-	python3 scripts/check_typ_files.py
+.PHONY: check-terms
+## check Typst files for raw/unreferenced glossary and acronym terms
+check-terms:
+	@$(MAKE) -C template check-terms
+
+.PHONY: update-regexes
+## regenerate regex patterns from helperfiles/glossary.yaml
+update-regexes:
+	@$(MAKE) -C template update-regexes
+
+.PHONY: grayscale
+## convert template/main.pdf to grayscale/black-and-white (mainbw.pdf)
+grayscale:
+	@$(MAKE) -C template grayscale
 
 .PHONY: clean
 ## delete generated example artifacts

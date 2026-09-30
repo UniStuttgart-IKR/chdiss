@@ -4,8 +4,8 @@ import argparse
 from pathlib import Path
 
 script_dir = Path(__file__).resolve().parent
-repo_dir = script_dir.parent
-content_dir = (repo_dir / 'template' / 'content') if (repo_dir / 'template' / 'content').exists() else (repo_dir / 'content')
+project_dir = script_dir.parent
+content_dir = (project_dir / 'content') if (project_dir / 'content').exists() else (project_dir / 'template' / 'content')
 regex_file = script_dir / 'regexesthatshouldntexis.txt'
 
 def check_typ_files(custom_pattern=None):
@@ -30,6 +30,7 @@ def check_typ_files(custom_pattern=None):
         # Mode 2: Bulk glossary check
         if not regex_file.exists():
             print(f"Error: Default regex file not found at {regex_file}")
+            print("Tip: Run generate_regexes.py first to generate regex patterns from glossary.yaml.")
             return
             
         with open(regex_file, 'r', encoding='utf-8') as f:
@@ -38,7 +39,7 @@ def check_typ_files(custom_pattern=None):
         compiled_regexes = [(p, re.compile(p)) for p in patterns]
         report_title = "--- TYPST GLOSSARY/ACRONYM BULK CHECK REPORT ---\n"
         output_log_file = script_dir / 'unreferenced_terms_report.txt'
-        print(f"Running bulk check against {len(compiled_regexes)} glossary patterns...")
+        print(f"Running bulk check against {len(compiled_regexes)} glossary patterns in {content_dir}...")
 
     # --- REGEX SETUP FOR TYPST FILTERING ---
     # 1. Strips refs with brackets, allowing multiple modifiers: @label:mod1:mod2[text]
@@ -54,13 +55,14 @@ def check_typ_files(custom_pattern=None):
     typst_label_pattern = re.compile(r'<[^>]+>')
 
     # --- FILE PARSING ---
-    typ_files = content_dir.rglob('*.typ')
+    typ_files = sorted(content_dir.rglob('*.typ'))
     match_count = 0
 
     with open(output_log_file, 'w', encoding='utf-8') as out_f:
         out_f.write(report_title + "\n")
         
         for file_path in typ_files:
+            rel_path = file_path.relative_to(project_dir) if file_path.is_relative_to(project_dir) else file_path
             with open(file_path, 'r', encoding='utf-8') as f:
                 for line_num, line in enumerate(f, 1):
                     
@@ -83,7 +85,7 @@ def check_typ_files(custom_pattern=None):
                     # Check the cleaned line against loaded regex(es)
                     for pattern_str, regex in compiled_regexes:
                         if regex.search(clean_line):
-                            print(f"File  : {file_path}:{line_num}", file=out_f)
+                            print(f"File  : {rel_path}:{line_num}", file=out_f)
                             print(f"Regex : {pattern_str}", file=out_f)
                             print(f"Line  : {line.strip()}", file=out_f)
                             print("-" * 60, file=out_f)
@@ -100,9 +102,9 @@ def check_typ_files(custom_pattern=None):
 
     # --- TERMINAL OUTPUT ---
     if match_count == 0:
-        print(f"All clear! 0 matches found. Report saved to: {output_log_file.name}")
+        print(f"All clear! 0 unreferenced occurrences found. Report saved to: {output_log_file.name}")
     else:
-        print(f"Done! Found {match_count} matches. Read the full report here: {output_log_file}")
+        print(f"Found {match_count} unreferenced matches. Read the full report here: {output_log_file}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Search Typst files while ignoring references, citations, math blocks, and labels.")

@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-import yaml
 import re
+from pathlib import Path
+import yaml
+
 script_dir = Path(__file__).resolve().parent
-repo_dir = script_dir.parent
-yaml_file = (repo_dir / 'template' / 'helperfiles' / 'glossary.yaml') if (repo_dir / 'template' / 'helperfiles' / 'glossary.yaml').exists() else (repo_dir / 'helperfiles' / 'glossary.yaml')
+project_dir = script_dir.parent
+yaml_file = (project_dir / 'helperfiles' / 'glossary.yaml') if (project_dir / 'helperfiles' / 'glossary.yaml').exists() else (project_dir / 'template' / 'helperfiles' / 'glossary.yaml')
 output_file = script_dir / 'regexesthatshouldntexis.txt'
 
 # --- HARDWIRED IGNORE LIST (ALLOWED IN TEXT) ---
@@ -24,6 +26,10 @@ FORBIDDEN_LIST = {
 }
 
 def generate_regexes():
+    if not yaml_file.exists():
+        print(f"Error: Glossary file not found at {yaml_file}")
+        return
+
     with open(yaml_file, 'r', encoding='utf-8') as f:
         data = yaml.safe_load(f)
 
@@ -63,13 +69,11 @@ def generate_regexes():
     # 2. Process terms from the hardwired FORBIDDEN_LIST
     for term in FORBIDDEN_LIST:
         escaped_term = re.escape(term)
-        # We make these case-sensitive exact matches by default.
-        # If you want them to be case-insensitive, change it to: rf'(?i)(?<![@#])\b{escaped_term}\b'
         pattern = rf'(?<![@#])\b{escaped_term}\b'
         regexes.add(pattern)
 
     # 3. Write all generated patterns to the output file
-    Path(output_file).parent.mkdir(parents=True, exist_ok=True)
+    output_file.parent.mkdir(parents=True, exist_ok=True)
     with open(output_file, 'w', encoding='utf-8') as f:
         for r in sorted(regexes):
             f.write(r + '\n')

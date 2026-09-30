@@ -46,10 +46,25 @@ querychaplen:
 	typst query main.typ --input dev="true" $(FONTPATH) "<chapter-lengths>" --field value | \
 	jq '.[0] | map(select(.title != "Testing" and .title != "Appendix")) | { chapters: ., total_sum: (map(.total_pages) | add) }'
 
+.PHONY: check-terms
+## check Typst files for raw/unreferenced glossary and acronym terms
+check-terms:
+	python3 scripts/check_typ_files.py
+
+.PHONY: update-regexes
+## regenerate regex patterns from helperfiles/glossary.yaml
+update-regexes:
+	python3 scripts/generate_regexes.py
+
+.PHONY: grayscale
+## convert main.pdf to grayscale/black-and-white for printing (mainbw.pdf)
+grayscale:
+	./scripts/convert2blackNwhite.sh main.pdf mainbw.pdf
+
 .PHONY: clean
 ## delete generated outputs
 clean:
-	rm -f main.pdf main.html
+	rm -f main.pdf main.html mainbw.pdf
 
 .PHONY: help
 ## show this help message

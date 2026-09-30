@@ -77,10 +77,15 @@ my-dissertation/
 │       └── appendix.typ
 ├── figures/               # Images, subfigures, and CeTZ diagrams
 │   └── cetzfigures.typ
-└── helperfiles/           # Metadata, bibliography, and glossaries
-    ├── glossary.yaml      # Definitions for Acronyms, Glossary, Symbols
-    ├── references.bib     # BibTeX references (tagged with keywords)
-    └── details.toml       # Optional metadata configuration
+├── helperfiles/           # Metadata, bibliography, and glossaries
+│   ├── glossary.yaml      # Definitions for Acronyms, Glossary, Symbols
+│   ├── references.bib     # BibTeX references (tagged with keywords)
+│   └── details.toml       # Optional metadata configuration
+└── scripts/               # Quality assurance and publication scripts
+    ├── check_typ_files.py       # Audits chapters for unreferenced glossary/acronym terms
+    ├── generate_regexes.py      # Generates regexes from helperfiles/glossary.yaml
+    ├── convert2blackNwhite.sh   # Converts main.pdf to grayscale for printing (mainbw.pdf)
+    └── regexesthatshouldntexis.txt
 ```
 
 ---
@@ -225,25 +230,75 @@ Every font family and size can be customized individually or via the `constants`
 
 ---
 
+## Authoring & Quality Assurance Scripts
+
+The template includes specialized utility scripts in `scripts/` to help maintain document quality and prepare the dissertation for physical submission:
+
+### 1. Glossary & Acronym Auditor (`check_typ_files.py`)
+
+Ensures that all domain acronyms and technical terms in your dissertation chapters (`content/**/*.typ`) are properly referenced through the Glossy package (e.g. `@BGP`, `@DWDM[...]`) rather than written in raw, unlinked plain text.
+
+- **Bulk Audit**:
+  ```bash
+  make check-terms
+  # or: python3 scripts/check_typ_files.py
+  ```
+  Scans all `.typ` files in `content/`, stripping comments (`//`), math blocks (`$ ... $`), headings, and valid references, then flags any raw matches against `regexesthatshouldntexis.txt`. Results are logged to `scripts/unreferenced_terms_report.txt`.
+
+- **Targeted Custom Regex Search**:
+  ```bash
+  python3 scripts/check_typ_files.py "(?i)\bmyterm\b"
+  ```
+  Searches for a specific pattern across all chapters while still ignoring comments, math blocks, and labels. Results are logged to `scripts/custom_search_report.txt`.
+
+### 2. Glossary Regex Pattern Generator (`generate_regexes.py`)
+
+Automatically parses `helperfiles/glossary.yaml` and extracts all acronyms (case-sensitive) and glossary terms/descriptions (case-insensitive) into regex patterns saved in `scripts/regexesthatshouldntexis.txt`.
+
+- **Run command**:
+  ```bash
+  make update-regexes
+  # or: python3 scripts/generate_regexes.py
+  ```
+- **Configuration options**:
+  - `IGNORE_LIST`: Common words you want to exclude from checking (e.g. `'availability'`).
+  - `FORBIDDEN_LIST`: Deprecated terms or phrases that must never appear in the dissertation (e.g. `'MTBF'`, `'security'`).
+
+### 3. Print Grayscale Converter (`convert2blackNwhite.sh`)
+
+University libraries and dissertation print shops often require a dedicated grayscale PDF edition for physical printing and archival bookbinding to prevent color artifacting or unwanted halftone banding.
+
+- **Run command**:
+  ```bash
+  make grayscale
+  # or: ./scripts/convert2blackNwhite.sh main.pdf mainbw.pdf
+  ```
+  Uses Ghostscript (`gs`) to convert `main.pdf` into a true grayscale PDF: `mainbw.pdf`.
+
+---
+
 ## Makefile Commands
 
-### In the package repository:
-- `make generate` — Compile the template example (`template/main.pdf`).
-- `make watch` — Watch mode with change detection (`dev="true"`).
-- `make thumbnail` — Regenerate the package preview thumbnail (`thumbnail.png`).
-- `make test-init` — Run automated end-to-end initialization test in `/tmp`.
-- `make queryrefs` — Check for unresolved citations or missing references.
-- `make querychaplen` — Query page counts per chapter.
-- `make install-local` — Link package to Typst local packages directory.
-- `make uninstall-local` — Remove local package symlink.
-- `make clean` — Remove generated build outputs.
-
-### In the user's initialized project (`template/`):
+### In the user's initialized project (`template/` or newly created dissertation):
 - `make generate` — Compile `main.pdf`.
-- `make watch` — Watch mode with live updates.
-- `make queryrefs` — Check document for unresolved citations.
-- `make querychaplen` — Check chapter page statistics.
-- `make clean` — Remove generated PDF files.
+- `make watch` — Watch mode with live updates (development mode).
+- `make watchnodev` — Watch mode in production mode.
+- `make grayscale` — Convert `main.pdf` to grayscale `mainbw.pdf` for physical printing.
+- `make check-terms` — Audit chapter files for unreferenced acronyms and glossary terms.
+- `make update-regexes` — Regenerate regex pattern database from `helperfiles/glossary.yaml`.
+- `make queryrefs` — Check document for unresolved citations or missing references.
+- `make querychaplen` — Check chapter page count statistics.
+- `make populate` — Compile with filler text.
+- `make html` — Compile experimental HTML version.
+- `make clean` — Remove generated PDF and HTML files.
+
+### In the package repository (maintainer commands):
+- `make install-local` — Link package to Typst local packages directory (`~/.local/share/typst/packages/local/chdiss/0.1.0`).
+- `make uninstall-local` — Remove local package symlink.
+- `make install-fonts` — Install bundled fonts into `~/.local/share/fonts/chdiss`.
+- `make test-init` — Run automated end-to-end initialization test in `/tmp`.
+- `make thumbnail` — Regenerate the package preview thumbnail (`thumbnail.png`).
+- All document and script targets above are also forwarded directly to the template.
 
 ---
 

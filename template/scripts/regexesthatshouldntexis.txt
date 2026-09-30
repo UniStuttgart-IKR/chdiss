@@ -1,3 +1,4 @@
+(?<![@#])\bAD\b
 (?<![@#])\bAI\b
 (?<![@#])\bASE\b
 (?<![@#])\bAS\b
@@ -41,6 +42,7 @@
 (?<![@#])\bILP\b
 (?<![@#])\bIP\b
 (?<![@#])\bIPoDWDM\b
+(?<![@#])\bIR\b
 (?<![@#])\bISO\b
 (?<![@#])\bISP\b
 (?<![@#])\bISPs\b
@@ -134,6 +136,8 @@
 (?<![@#])\bgNMI\b
 (?<![@#])\bgRPC\b
 (?<![@#])\biBGP\b
+(?<![@#])\bprivacy\b
+(?<![@#])\bsecurity\b
 (?i)(?<![@#])\bHamiltonian\ Monte\ Carlo\b
 (?i)(?<![@#])\bIBN\-into\-SDN\b
 (?i)(?<![@#])\bIBN\-over\-SDN\b
@@ -148,6 +152,8 @@
 (?i)(?<![@#])\bOpenConfig\b
 (?i)(?<![@#])\bOpenDaylight\b
 (?i)(?<![@#])\bOpenFlow\b
+(?i)(?<![@#])\bOpenROADM\b
+(?i)(?<![@#])\bOpenZR\+\b
 (?i)(?<![@#])\bProvisioning\ Risk\-aware\ Intents\ Across\ Multi\-domains\b
 (?i)(?<![@#])\bSLA\ decomposition\b
 (?i)(?<![@#])\bTeraFlowSDN\b
@@ -155,9 +161,11 @@
 (?i)(?<![@#])\baccess\ network\b
 (?i)(?<![@#])\bamplified\ spontaneous\ emissions\b
 (?i)(?<![@#])\bartificial\ intelligence\b
+(?i)(?<![@#])\bautomatic\ differentiation\b
 (?i)(?<![@#])\bautonomous\ system\b
 (?i)(?<![@#])\bautonomous\ systems\b
 (?i)(?<![@#])\bavailability\ metric\b
+(?i)(?<![@#])\bavailability\ sensitivity\b
 (?i)(?<![@#])\bavailability\ specification\b
 (?i)(?<![@#])\bbackbone\ network\b
 (?i)(?<![@#])\bbandwidth\-variable\ transponder\b
@@ -219,10 +227,12 @@
 (?i)(?<![@#])\bintent\-based\ networking\b
 (?i)(?<![@#])\binter\-domain\b
 (?i)(?<![@#])\binterior\ gateway\ protocol\b
+(?i)(?<![@#])\bintermediate\ representation\b
 (?i)(?<![@#])\bintermediate\ system\-to\-intermediate\ system\b
 (?i)(?<![@#])\binternal\ BGP\b
 (?i)(?<![@#])\binternational\ organization\ for\ standardization\b
 (?i)(?<![@#])\binternet\ exchange\ point\b
+(?i)(?<![@#])\binternet\ exchange\ points\b
 (?i)(?<![@#])\binternet\ of\ things\b
 (?i)(?<![@#])\binternet\ protocol\b
 (?i)(?<![@#])\binternet\ service\ provider\b
@@ -248,6 +258,7 @@
 (?i)(?<![@#])\bmulti\-core\ fiber\b
 (?i)(?<![@#])\bmulti\-domain\b
 (?i)(?<![@#])\bmultiprotocol\ label\ switching\b
+(?i)(?<![@#])\bnetwork\ dimensioning\b
 (?i)(?<![@#])\bnetwork\ operating\ system\b
 (?i)(?<![@#])\bnetwork\ tomography\b
 (?i)(?<![@#])\bnetwork\-layer\ reachability\ information\b
@@ -274,7 +285,6 @@
 (?i)(?<![@#])\bpath\ computation\ element\b
 (?i)(?<![@#])\bpending\ interest\ table\b
 (?i)(?<![@#])\bplesiochronous\ digital\ hierarchy\b
-(?i)(?<![@#])\bpoint\ availability\b
 (?i)(?<![@#])\bpolarization\-mode\ dispersion\b
 (?i)(?<![@#])\bpolicy\-based\ network\ management\b
 (?i)(?<![@#])\bprior\ analysis\b
@@ -301,9 +311,9 @@
 (?i)(?<![@#])\bself\-phase\ modulation\b
 (?i)(?<![@#])\bservice\-level\ agreement\b
 (?i)(?<![@#])\bservice\-level\ agreements\b
-(?i)(?<![@#])\bshared\ link\ group\b
 (?i)(?<![@#])\bshared\ link\ groups\b
 (?i)(?<![@#])\bshared\ protection\b
+(?i)(?<![@#])\bshared\ risk\ group\b
 (?i)(?<![@#])\bshared\ risk\ link\ group\b
 (?i)(?<![@#])\bshared\ risk\ link\ groups\b
 (?i)(?<![@#])\bsimple\ mail\ transfer\ protocol\b
