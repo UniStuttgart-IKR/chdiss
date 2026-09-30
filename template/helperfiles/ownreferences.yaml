@@ -1,8 +1,0 @@
-'cite-doe-2022':
-  type: article
-  title: Sample Publication on Decentralized Systems
-  author: Doe, John
-  date: 2022
-  parent:
-    type: proceedings
-    title: International Conference on Network Protocols
