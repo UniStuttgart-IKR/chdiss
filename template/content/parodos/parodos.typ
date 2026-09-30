@@ -16,7 +16,7 @@
 
 #FUNCS.fheading([Core Architectural Assumptions])
 
-#text(fill: blue)[*Function `#inline-terms(..items, style: "bold", delim: ":")`:* Formats a list of `([Term], [Definition])` tuples into a compact, bulleted inline list.]
+#text(fill: blue)[*Function `#inline-terms(..items, style: "bold", delim: ":")`:* Formats a list of `([Term], [Definition])` tuples into a compact, inline list such that it does not indent and save space.]
 
 #text(fill: blue)[*Function `#im(eq, alt: none)`:* Wraps inline math expressions (such as #im($theta$) or directional flows #im($-->$)) to ensure clean rendering across both PDF and HTML exports.]
 

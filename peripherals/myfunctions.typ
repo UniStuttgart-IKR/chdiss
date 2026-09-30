@@ -422,15 +422,19 @@
 #let subfigures(
   columns: (1fr, 1fr),
   gutter: 0.5em,
+  column-gutter: auto,
+  row-gutter: auto,
   caption: none,
   ..items
 ) = figure(
   {
+    let cg = if column-gutter != auto { column-gutter } else { gutter }
+    let rg = if row-gutter != auto { row-gutter } else { gutter }
     counter(figure.where(kind: "subfigure")).update(0)
     table(
       columns: columns,
-      column-gutter: gutter,
-      row-gutter: gutter,
+      column-gutter: cg,
+      row-gutter: rg,
       align: horizon,
       stroke: none,
       ..items.pos()

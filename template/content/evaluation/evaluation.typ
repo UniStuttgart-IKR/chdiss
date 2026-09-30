@@ -87,43 +87,24 @@ The performance evaluation uses structured metric definitions demonstrated below
 #lorem(20) @fig_eval_subfigures.
 
 #htmlplace(top+center, [
-#counter(figure.where(kind: "subfigure")).update(0)
-#figure(
-  table(
-    columns: (1fr, 1fr),
-    column-gutter: 0.1em,
-    row-gutter: -0.6em,
-    align: horizon,
-    stroke: none,
-
-    table.cell(
-      colspan: 2,
-      align: center,
-      image("../../figures/allflatsimfigs/triplegend_estimtrue.pdf"),
-    ),
-
-    [#figure(
-      image("../../figures/allflatsimfigs/mass__SD_ikpi_estim-true.pdf"),
-      caption: [#kpi("M1", "M2", "M3")],
-      kind: "subfigure",
-      supplement: none,
-      numbering: "a",
-      outlined: false,
-    ) <fig_eval_scenario_a>],
-
-    [#figure(
-      image("../../figures/allflatsimfigs/mass__MD_ikpi_estim-true.pdf"),
-      caption: [#kpi("M1", "M2", "M4")],
-      kind: "subfigure",
-      supplement: none,
-      numbering: "a",
-      outlined: false,
-    ) <fig_eval_scenario_b>],
-
-
-  ),
+#FUNCS.subfigures(
+  columns: (1fr, 1fr),
+  column-gutter: 0.1em,
+  row-gutter: -0.6em,
   caption: [#kpi("M1", "M2", ("M3", "M4")).],
-  kind: image,
+  table.cell(
+    colspan: 2,
+    align: center,
+    image("../../figures/allflatsimfigs/triplegend_estimtrue.pdf"),
+  ),
+  [#FUNCS.subfig(
+    image("../../figures/allflatsimfigs/mass__SD_ikpi_estim-true.pdf"),
+    caption: [#kpi("M1", "M2", "M3")],
+  ) <fig_eval_scenario_a>],
+  [#FUNCS.subfig(
+    image("../../figures/allflatsimfigs/mass__MD_ikpi_estim-true.pdf"),
+    caption: [#kpi("M1", "M2", "M4")],
+  ) <fig_eval_scenario_b>],
 ) <fig_eval_subfigures>
 ])
 

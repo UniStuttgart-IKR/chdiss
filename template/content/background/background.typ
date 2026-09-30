@@ -39,32 +39,22 @@ $ p(theta | y) = frac(p(y | theta) med p(theta), p(y)) $ <eq_bayesrule>
   caption: [Example diagram generated using CeTZ.],
 ) <fig_bayes_example>
 
-#counter(figure.where(kind: "subfigure")).update(0)
-#figure(
-  table(
-    columns: (1fr, 1fr),
-    column-gutter: 0.5em,
-    align: horizon,
-    stroke: none,
-    [#figure(
-      image("../../figures/allflatsimfigs/bayesianexample1.pdf"),
-      caption: [Prior, likelihood, and posterior distributions],
-      kind: "subfigure",
-      supplement: none,
-      numbering: "a",
-      outlined: false,
-    ) <fig_bayesianex1>],
-    [#figure(
-      image("../../figures/allflatsimfigs/bayesianexample2.pdf"),
-      caption: [Prior and posterior predictive distributions],
-      kind: "subfigure",
-      supplement: none,
-      numbering: "a",
-      outlined: false,
-    ) <fig_bayesianex2>],
-  ),
+#lorem(40)
+
+#text(fill: blue)[*Functions `#subfigures(..cells, columns: 2, caption: [...])` and `#subfig(body, caption: [...])`:* Construct multi-column subfigure grids with automatic sub-figure lettering `(a)`, `(b)`, individual sub-captions, and an integrated main figure caption.]
+
+#FUNCS.subfigures(
+  columns: (1fr, 1fr),
+  gutter: 0.5em,
   caption: [Two-column subfigure example: parameter distributions under observation.],
-  kind: image,
+  [#FUNCS.subfig(
+    image("../../figures/allflatsimfigs/bayesianexample1.pdf"),
+    caption: [Prior, likelihood, and posterior distributions],
+  ) <fig_bayesianex1>],
+  [#FUNCS.subfig(
+    image("../../figures/allflatsimfigs/bayesianexample2.pdf"),
+    caption: [Prior and posterior predictive distributions],
+  ) <fig_bayesianex2>],
 ) <fig_bayesianex>
 
 #lorem(35) @fig_bayesianex1 and @fig_bayesianex2. #lorem(25) @mcmc.
