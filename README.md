@@ -73,7 +73,6 @@ my-dissertation/
 └── helperfiles/           # Metadata, bibliography, and glossaries
     ├── glossary.yaml      # Definitions for Acronyms, Glossary, Symbols
     ├── references.bib     # BibTeX references (tagged with keywords)
-    ├── alpha.csl          # Alphanumeric CSL citation style
     └── details.toml       # Optional metadata configuration
 ```
 
