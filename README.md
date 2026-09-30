@@ -22,32 +22,126 @@ Build with love. Refactored as a template with AI.
 
 ---
 
-## Quick Start
+## Prerequisites
 
-### 1. Initialize a new project with Typst CLI
+Before using the template, ensure you have the following installed:
 
-If installed locally:
+| Tool | Required? | Recommended Version | Purpose |
+| :--- | :---: | :--- | :--- |
+| [**Typst CLI**](https://github.com/typst/typst) | **Yes** | $\ge$ 0.12.0 | Core document compiler (`typst --version`) |
+| [**GNU Make**](https://www.gnu.org/software/make/) | Optional | $\ge$ 4.0 | Build automation & shortcut commands |
+| [**Python 3**](https://www.python.org/) & `pyyaml` | Optional | $\ge$ 3.8 | QA scripts (`pip install pyyaml`) |
+| [**Ghostscript**](https://www.ghostscript.com/) (`gs`) | Optional | $\ge$ 9.50 | Grayscale PDF export for physical printing |
+
+---
+
+## Installation from GitHub
+
+You can use `chdiss` either as an installed **local Typst package** (recommended, allowing you to scaffold clean dissertation projects anywhere) or directly as a **starter repository**.
+
+### Method 1: Install as a Local Typst Package (Recommended)
+
+Typst supports local package namespaces via `@local`. Installing this repository into your local package store allows you to create new dissertation projects anywhere with `typst init` and import the template cleanly (`#import "@local/chdiss:0.1.0": *`).
+
+#### Step 1: Clone the Repository
 ```bash
-typst init @local/chdiss:0.1.0 my-dissertation
-cd my-dissertation
-typst watch main.typ
+git clone https://github.com/<username>/chdiss.git
+cd chdiss
 ```
+*(Replace `<username>` with the GitHub organization or username hosting the repository.)*
 
-### 2. Manual Installation into Local Packages
+#### Step 2: Install Package and Bundled Fonts
 
-From this repository root:
+Using GNU Make:
 ```bash
+# 1. Symlink this repository into Typst's local package directory
 make install-local
-```
-This symlinks this repository to:
-```
-~/.local/share/typst/packages/local/chdiss/0.1.0
+
+# 2. Install bundled fonts (Liberation Sans, TeX Gyre Heros, etc.) into system font path
+make install-fonts
 ```
 
-To verify the installation:
+<details>
+<summary><b>Manual installation without Make (or on macOS / Windows)</b></summary>
+
+If you do not have GNU Make or are running on macOS or Windows, create the appropriate directory and symbolic link pointing to the cloned repository root:
+
+- **Linux**:
+  ```bash
+  mkdir -p ~/.local/share/typst/packages/local/chdiss
+  ln -sfn "$(pwd)" ~/.local/share/typst/packages/local/chdiss/0.1.0
+  ```
+- **macOS**:
+  ```bash
+  mkdir -p ~/Library/Application\ Support/typst/packages/local/chdiss
+  ln -sfn "$(pwd)" ~/Library/Application\ Support/typst/packages/local/chdiss/0.1.0
+  ```
+- **Windows (PowerShell as Administrator or Developer Mode)**:
+  ```powershell
+  New-Item -ItemType Directory -Force -Path "$env:APPDATA\typst\packages\local\chdiss"
+  New-Item -ItemType SymbolicLink -Path "$env:APPDATA\typst\packages\local\chdiss\0.1.0" -Target (Get-Location)
+  ```
+
+To install the bundled fonts manually, copy all `.otf` and `.ttf` files from the `fonts/` directory into your operating system's font folder (e.g. `~/.local/share/fonts/` on Linux, `~/Library/Fonts/` on macOS, or right-click $\rightarrow$ *Install for all users* on Windows).
+</details>
+
+#### Step 3: Verify the Installation
+Run the automated initialization test to ensure Typst can find and build the template:
 ```bash
 make test-init
 ```
+
+#### Step 4: Initialize Your Dissertation Project
+Once installed locally, you can initialize a brand new dissertation anywhere on your system:
+```bash
+typst init @local/chdiss:0.1.0 my-dissertation
+cd my-dissertation
+```
+
+#### Step 5: Start Writing
+```bash
+# Start watch mode with live compilation
+make watch
+
+# Or compile a single PDF:
+make generate
+```
+
+---
+
+### Method 2: Use Directly as a Starter Repository
+
+If you prefer to keep everything self-contained in a single repository without running `typst init`:
+
+1. **Clone or Click "Use this template" on GitHub**:
+   ```bash
+   git clone https://github.com/<username>/chdiss.git my-dissertation
+   cd my-dissertation
+   ```
+2. **Install the package link & fonts**:
+   ```bash
+   make install-local
+   make install-fonts
+   ```
+3. **Compile or watch**:
+   From the repository root, commands are automatically dispatched to the template:
+   ```bash
+   make watch       # or: make generate
+   ```
+   The output PDF will be generated at `template/main.pdf`.
+
+---
+
+### Updating the Template from GitHub
+
+Because `make install-local` links your cloned repository directory directly into the Typst local package directory, updating the template is as simple as running:
+
+```bash
+cd path/to/chdiss
+git pull
+```
+
+All existing and new dissertation projects referencing `@local/chdiss:0.1.0` will automatically use the updated package without needing to reinstall.
 
 ---
 
